@@ -17,16 +17,16 @@ body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;min-he
 .logo{font-size:2rem;font-weight:800;letter-spacing:-1px;margin-bottom:6px;user-select:none}
 .logo .t{color:var(--lavender)}.logo .o{color:var(--green)}.logo .b{color:var(--gold)}
 .nav{display:flex;gap:4px;margin-bottom:24px;background:var(--bg2);border-radius:10px;padding:4px;border:1px solid var(--border)}
-.nav button{background:none;border:none;color:var(--dim);font-family:'Syne',sans-serif;font-size:.85rem;font-weight:600;padding:6px 18px;border-radius:7px;cursor:pointer;transition:all .15s;letter-spacing:.5px;text-transform:uppercase}
+.nav button{background:none;border:none;color:var(--dim);font-family:'Syne',sans-serif;font-size:.85rem;font-weight:600;padding:6px 18px;border-radius:7px;cursor:pointer;transition:all .15s}
 .nav button.active{background:var(--bg3);color:var(--text);box-shadow:0 1px 4px rgba(0,0,0,.4)}
 .panel{display:none;width:100%;max-width:900px}.panel.active{display:block}
 
 .mode-bar{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap;align-items:center}
-.mode-btn{background:var(--bg2);border:1px solid var(--border);color:var(--dim);font-family:'Syne',sans-serif;font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:6px;cursor:pointer;transition:all .15s;text-transform:uppercase;letter-spacing:.5px}
+.mode-btn{background:var(--bg2);border:1px solid var(--border);color:var(--dim);font-family:'Syne',sans-serif;font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:6px;cursor:pointer;transition:all .15s}
 .mode-btn.active{background:var(--purple);border-color:var(--purple);color:#fff}
-.timer-select{margin-left:auto;background:var(--bg2);border:1px solid var(--border);color:var(--dim);font-family:'Syne',sans-serif;font-size:.75rem;padding:5px 10px;border-radius:6px;cursor:pointer;outline:none}
+.timer-select{margin-left:auto;background:var(--bg2);border:1px solid var(--border);color:var(--dim);font-family:'Syne',sans-serif;font-size:.75rem;padding:5px 10px;border-radius:6px;cursor:pointer}
 .timer-select.active-timer{border-color:var(--teal);color:var(--teal)}
-.hardcore-btn{background:var(--bg2);border:1px solid var(--border);color:var(--dim);font-family:'Syne',sans-serif;font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:6px;cursor:pointer;transition:all .15s;text-transform:uppercase;letter-spacing:.5px}
+.hardcore-btn{background:var(--bg2);border:1px solid var(--border);color:var(--dim);font-family:'Syne',sans-serif;font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:6px;cursor:pointer;transition:all .15s}
 .hardcore-btn.active{background:#7f1d1d;border-color:var(--red);color:var(--red)}
 
 .stats-bar{display:flex;gap:20px;margin-bottom:12px;font-size:.85rem;color:var(--dim);font-family:'JetBrains Mono',monospace}
@@ -80,23 +80,14 @@ body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;min-he
   padding:14px 14px 0;margin-bottom:8px;user-select:none;
   display:inline-block;
 }
-/* Trainer keyboard: stretch to match prompt box width */
-#trainerKb{
-  display:block;width:100%;box-sizing:border-box;
-}
+#trainerKb{display:block;width:100%;box-sizing:border-box}
 #trainerKb .keyboard-wrap{display:block;width:100%}
 #trainerKb .kb-row{gap:0}
 #trainerKb .key{min-width:0;height:46px;font-size:.68rem}
-/* Stats keyboard: stretch full width inside its card */
-#statsKb .keyboard-wrap{
-  display:block;width:100%;box-sizing:border-box;
-}
+#statsKb .keyboard-wrap{display:block;width:100%;box-sizing:border-box}
 #statsKb .kb-row{gap:0}
 #statsKb .key{min-width:0;height:46px;font-size:.68rem}
-/* Dictation keyboard: full width matching trainer */
-#dictKb{
-  display:block;width:100%;box-sizing:border-box;
-}
+#dictKb{display:block;width:100%;box-sizing:border-box}
 #dictKb .keyboard-wrap{display:block;width:100%}
 #dictKb .kb-row{gap:0}
 #dictKb .key{min-width:0;height:46px;font-size:.68rem}
@@ -111,15 +102,12 @@ body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;min-he
 .key.w20{width:20px}.key.w28{width:28px}.key.w40{width:40px}.key.w44{width:44px}.key.w54{width:54px}.key.w62{width:62px}
 .key.w70{width:70px}.key.w80{width:80px}.key.w88{width:88px}
 .key.w95{width:95px}.key.w110{width:110px}
-/* Spacebar: sized to match so right Ctrl/Alt sit under right Shift */
 .key.wsp{width:250px}
 .key.lit{background:var(--teal)!important;color:#fff!important;border-color:var(--teal)!important;transform:scale(.94)}
 .key.lit-space{background:rgba(79,196,207,0.28)!important;border-color:rgba(79,196,207,0.45)!important;transform:scale(.97)}
 .key.err{background:var(--red)!important;color:#fff!important;border-color:var(--red)!important;transform:scale(.94)}
 
-/* ── FINGER COLORS — 8 high-contrast distinct hues + thumb ── */
-/* LP=violet  LR=amber  LM=hot-pink  LI=sky-blue
-   RI=crimson  RM=lime  RR=cyan  RP=orange  TH=spring-green */
+/* ── FINGER COLORS ── */
 .key.f-lp{border-bottom:3px solid #9b59ff}
 .key.f-lr{border-bottom:3px solid #ffd000}
 .key.f-lm{border-bottom:3px solid #ff2eb0}
@@ -130,7 +118,7 @@ body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;min-he
 .key.f-rp{border-bottom:3px solid #ff6a00}
 .key.f-th{border-bottom:3px solid #39e08a}
 
-/* ── FINGER BAR — same width as keyboard, proportional segments ── */
+/* ── FINGER BAR ── */
 .finger-bar{
   display:flex;flex-direction:column;border-top:1px solid var(--border);
   margin-top:2px;border-radius:0 0 10px 10px;overflow:hidden;
@@ -163,7 +151,7 @@ body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;min-he
 .dict-box{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin-bottom:12px;min-height:80px;font-family:'JetBrains Mono',monospace;font-size:1.05rem;line-height:1.7;color:var(--dim)}
 .dict-box.has-text{color:var(--text)}
 .dict-result .correct{color:var(--green)}.dict-result .wrong{color:var(--red);text-decoration:underline}
-.dict-input{width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;font-family:'JetBrains Mono',monospace;font-size:1rem;color:var(--text);outline:none;margin-bottom:8px}
+.dict-input{width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;font-family:'JetBrains Mono',monospace;font-size:1rem;color:var(--text);outline:none}
 .dict-input:focus{border-color:var(--teal)}
 
 /* ── STATS ── */
@@ -186,9 +174,8 @@ body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;min-he
 .legend span{display:flex;align-items:center;gap:5px}
 .dot{width:8px;height:8px;border-radius:50%;display:inline-block}
 .dot.green{background:var(--green)}.dot.orange{background:var(--orange)}.dot.red{background:var(--red)}
-.clear-btn{background:none;border:1px solid var(--border);color:var(--dim);font-family:'Syne',sans-serif;font-size:.75rem;font-weight:600;padding:6px 14px;border-radius:6px;cursor:pointer;transition:all .15s;text-transform:uppercase;letter-spacing:.5px}
+.clear-btn{background:none;border:1px solid var(--border);color:var(--dim);font-family:'Syne',sans-serif;font-size:.75rem;font-weight:600;padding:6px 14px;border-radius:6px;cursor:pointer;transition:all .15s}
 .clear-btn:hover{border-color:var(--red);color:var(--red)}
-/* per-mode stats */
 .mode-stats-section{margin-bottom:16px}
 .mode-stats-section h3{font-size:.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--dim);margin-bottom:10px}
 .mode-stats-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
@@ -204,10 +191,8 @@ body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;min-he
 .mode-stat-row:last-child{border-bottom:none}
 .mode-stat-row .msk{font-size:.68rem;color:var(--dim);font-family:'Syne',sans-serif}
 .mode-stat-row .msv{font-size:.78rem;font-weight:700;color:var(--text);font-family:'JetBrains Mono',monospace}
-/* next-key hint on keyboard */
 .key.next-key{background:rgba(79,196,207,.22)!important;border-color:rgba(79,196,207,.55)!important;color:var(--teal)!important;box-shadow:0 0 8px rgba(79,196,207,.3)}
 
-/* Caps Lock LED */
 .caps-led{
   position:absolute;top:4px;right:5px;
   width:6px;height:6px;border-radius:50%;
@@ -217,7 +202,6 @@ body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;min-he
 }
 .caps-led.on{background:#ffffff;box-shadow:0 0 5px #ffffff,0 0 10px rgba(255,255,255,.5);border-color:#ffffff;}
 
-/* Secondary char label on keys (top-left small char) */
 .key{position:relative;}
 .key-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;height:100%;}
 .key-secondary{
@@ -228,10 +212,8 @@ body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;min-he
 }
 .key-primary{font-size:.72rem;font-weight:600;}
 
-/* Enter key lit at prompt completion */
 .key.enter-lit{background:rgba(79,196,207,.3)!important;border-color:var(--teal)!important;color:var(--teal)!important;box-shadow:0 0 8px rgba(79,196,207,.4);}
 
-/* Dictation keyboard wrapper panel */
 .dict-kb-panel{
   background:var(--bg2);border:1px solid var(--border);border-radius:14px;
   padding:14px 14px 0;margin-top:8px;
@@ -262,15 +244,14 @@ body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;min-he
       <option value="60">1m</option><option value="90">90s</option><option value="120">2m</option><option value="180">3m</option>
     </select>
     <button class="hardcore-btn" id="hardcoreBtn" onclick="toggleHardcore(this)" title="Every wrong key starts a new prompt">☠ Hardcore</button>
-
   </div>
   <div class="countdown-wrap" id="countdownWrap"><div class="countdown-bar" id="countdownBar" style="width:100%"></div></div>
-  <div id="pkInfoBar" style="display:none;background:rgba(247,162,106,.08);border:1px solid rgba(247,162,106,.25);border-radius:8px;padding:7px 14px;margin-bottom:10px;font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--orange);display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+  <div id="pkInfoBar" style="display:none;background:rgba(247,162,106,.08);border:1px solid rgba(247,162,106,.25);border-radius:8px;padding:7px 14px;margin-bottom:10px;font-family:'JetBrains Mono',monospace;font-size:.75rem;display:flex;align-items:center;gap:10px;">
     <span id="pkInfoLabel" style="flex-shrink:0">Targeting:</span>
     <input id="pkCustomInput" type="text" placeholder="e.g. q z x j k" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
-      style="background:rgba(247,162,106,.12);border:1px solid rgba(247,162,106,.35);border-radius:5px;color:var(--orange);font-family:'JetBrains Mono',monospace;font-size:.75rem;padding:3px 8px;outline:none;min-width:140px;flex:1">
+      style="background:rgba(247,162,106,.12);border:1px solid rgba(247,162,106,.35);border-radius:5px;color:var(--orange);font-family:'JetBrains Mono',monospace;font-size:.75rem;padding:3px 8px;flex:1;outline:none">
     <button id="pkResetBtn" onclick="resetPkCustom()" title="Revert to heatmap-based targeting"
-      style="background:none;border:1px solid rgba(247,162,106,.35);color:var(--orange);font-family:'Syne',sans-serif;font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:5px;cursor:pointer;letter-spacing:.5px;text-transform:uppercase;flex-shrink:0;opacity:0.7">↺ Auto</button>
+      style="background:none;border:1px solid rgba(247,162,106,.35);color:var(--orange);font-family:'Syne',sans-serif;font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:5px;cursor:pointer;transition:all .15s;">Reset</button>
   </div>
   <div class="stats-bar">
     <span>WPM: <b id="wpmDisplay">0</b></span>
@@ -327,62 +308,47 @@ body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;min-he
   <div class="stats-kb-wrap">
     <h3>Key Heatmap</h3>
     <div class="legend">
-      <span><span class="dot green"></span> &le;5% error</span>
+      <span><span class="dot green"></span> ≤5% error</span>
       <span><span class="dot orange"></span> 5–20% error</span>
-      <span><span class="dot red"></span> &gt;20% error</span>
+      <span><span class="dot red"></span> >20% error</span>
     </div>
     <div id="statsKb"></div>
   </div>
 </div>
 
 <script>
-// ═══════════════════════════════════════════════
-// AUDIO — perfectly consistent mechanical click
-// Noise buffers pre-baked once so every hit is identical
-// ═══════════════════════════════════════════════
+// Audio functions
 let audioCtx=null;
 function getCtx(){if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();return audioCtx;}
 
-
-// Single pre-baked click buffer with envelope fully baked in — zero variation ever
 let _masterClickBuf=null;
 function _ensureBuffers(){
   const ctx=getCtx();
   if(_masterClickBuf) return;
-  // Total click = 30ms. We bake three layers into one buffer with fixed envelopes:
-  // [0-12ms] click layer (bandpass-ish shaped noise, baked amplitude envelope)
-  // [0-25ms] thud layer (lowpass-ish shaped noise, baked amplitude envelope)
-  // [0-18ms] ping layer (sine sweep baked as samples, baked amplitude envelope)
   const sr=ctx.sampleRate;
   const totalLen=Math.floor(sr*.030);
   _masterClickBuf=ctx.createBuffer(1,totalLen,sr);
   const out=new Float32Array(totalLen);
-  // deterministic LCG seed
   let s=0x12345678;
   function lcg(){s=(Math.imul(s,1664525)+1013904223)|0;return s/2147483648;}
-  // Layer 1: click — noise with high-freq emphasis + envelope
   const clickLen=Math.floor(sr*.012);
-  // simple bandpass approximation: difference of two LP-filtered noise streams
   let hp1=0,hp2=0;
   for(let i=0;i<clickLen;i++){
     const n=lcg();
-    // two-pole high-emphasis: subtract smoothed version
     hp1=hp1*.55+n*.45; hp2=hp2*.85+n*.15;
     const shaped=(hp1-hp2)*2.2;
     const env=Math.exp(-i/(clickLen*.28));
     out[i]+=shaped*env*.52;
   }
-  // Layer 2: thud — low-freq noise with baked decay
-  s=0xABCDEF01; // different seed for different texture
+  s=0xABCDEF01;
   const thudLen=Math.floor(sr*.025);
   let lp=0;
   for(let i=0;i<thudLen;i++){
     const n=lcg();
-    lp=lp*.92+n*.08; // gentle lowpass
+    lp=lp*.92+n*.08;
     const env=Math.exp(-i/(thudLen*.18));
     out[i]+=lp*env*.36;
   }
-  // Layer 3: ping — baked sine sweep 2800→1200Hz
   const pingLen=Math.floor(sr*.018);
   for(let i=0;i<pingLen;i++){
     const f=2800*Math.pow(1200/2800,i/pingLen);
@@ -397,7 +363,6 @@ function playCorrect(){
   try{
     const ctx=getCtx(); _ensureBuffers();
     const t=ctx.currentTime;
-    // Play the single deterministic buffer — always identical volume, pitch, character
     const src=ctx.createBufferSource(); src.buffer=_masterClickBuf;
     const g=ctx.createGain(); g.gain.setValueAtTime(1.0,t);
     src.connect(g); g.connect(ctx.destination);
@@ -423,16 +388,13 @@ function playWrong(){
   }catch(e){}
 }
 
-// Cheerful ascending arpeggio: C5→E5→G5→C6 + sparkle
 function playArpeggio(){
   try{
     const ctx=getCtx();
-    // C5=523.25 E5=659.25 G5=783.99 C6=1046.50
     const notes=[523.25,659.25,783.99,1046.50];
-    const spacing=0.075; // seconds between notes
+    const spacing=0.075;
     notes.forEach((freq,i)=>{
       const t=ctx.currentTime+i*spacing;
-      // Main tone: sine + slight triangle mix for warmth
       const o=ctx.createOscillator(); o.type='triangle';
       o.frequency.setValueAtTime(freq,t);
       const g=ctx.createGain();
@@ -441,7 +403,6 @@ function playArpeggio(){
       g.gain.exponentialRampToValueAtTime(0.001,t+0.22);
       o.connect(g); g.connect(ctx.destination);
       o.start(t); o.stop(t+0.25);
-      // Harmonic shimmer (one octave up, quiet)
       const oh=ctx.createOscillator(); oh.type='sine';
       oh.frequency.setValueAtTime(freq*2,t);
       const gh=ctx.createGain();
@@ -451,7 +412,6 @@ function playArpeggio(){
       oh.connect(gh); gh.connect(ctx.destination);
       oh.start(t); oh.stop(t+0.18);
     });
-    // Sparkle: brief high-pitched shimmer after last note
     const sparkleT=ctx.currentTime+notes.length*spacing+0.02;
     [2093,2637,3136].forEach((f,i)=>{
       const t=sparkleT+i*0.04;
@@ -466,9 +426,7 @@ function playArpeggio(){
   }catch(e){}
 }
 
-// ═══════════════════════════════════════════════
-// KEYBOARD
-// ═══════════════════════════════════════════════
+// Keyboard setup
 const FINGER={
   '`':'lp','1':'lp','2':'lr','3':'lm','4':'li','5':'li','6':'ri',
   '7':'ri','8':'rm','9':'rr','0':'rp','-':'rp','=':'rp',
@@ -478,61 +436,33 @@ const FINGER={
   'h':'ri','j':'ri','k':'rm','l':'rr',';':'rp',"'":'rp',
   'z':'lp','x':'lr','c':'lm','v':'li','b':'li',
   'n':'ri','m':'ri',',':'rm','.':'rr','/':'rp',
-  // modifier keys — pinky/thumb
   'backspace':'rp','enter':'rp','caps':'lp','lshift':'lp','rshift':'rp',
   'ctrl':'lp','rctrl':'rp','lalt':'th','ralt':'th',' ':'th','tab':'lp',
 };
 
-// Row widths:
-// Row0: 13×w40 + w70(bksp) + 13 gaps(5) = 520+70+65 = 655
-// Row1: w54(tab)+13×w40+w54(bsls)+13 gaps = 54+520+54+65 = 693... 
-// Let me just size rows consistently at ~650px and size spacebar to match.
-// The goal: right Alt(w54) + right Ctrl(w54) RIGHT EDGE = right Shift(w110) RIGHT EDGE
-// Row3 right edge from left: w88(lshift)+11×w40+w110+11gaps×5 = 88+440+110+55 = 693
-// Bot row right edge: w62(ctrl)+w54(lalt)+wsp+w54(ralt)+w62(rctrl)+4gaps×5
-// = 62+54+wsp+54+62+20 = 252+wsp
-// Match row3=693: wsp = 693-252 = 441... too wide. Rows don't match because row1 != row3.
-// Simpler: just make all rows same total by matching the standard keyboard proportions.
-// I'll fix by making row0 narrower (w40 keys, w62 bksp) and adjusting accordingly.
-// Actually the cleanest approach: define a fixed total width and calc spacebar.
-// Total width target = 648px (standard 14-key rows).
-// Row0: 13×40+62+13×5 = 520+62+65 = 647 ✓
-// Row1: 54+13×40+54+14×5 = 54+520+54+70 = 698 — need tab wider or bsls narrower
-// Let me just be consistent: use the same approach as most keyboards visually.
-// Final approach: use flex on each row so all rows stretch to same width.
-
-// Secondary characters for shifted keys (shown top-left on key)
 const SECONDARY={
   '`':'~','1':'!','2':'@','3':'#','4':'$','5':'%','6':'^','7':'&','8':'*','9':'(','0':')','-':'_','=':'+',
   '[':'{',']':'}','\\':'|',';':':','\'':'"',',':'<','.':'>','/':'?',
 };
-// Reverse map: secondary char → base key (e.g. '!' → '1')
 const SECONDARY_REV={};
 Object.entries(SECONDARY).forEach(([base,sec])=>{ SECONDARY_REV[sec]=base; });
 
 const ROWS=[
-  // number row — ` is half-width, numbers slightly wider, backspace wider
   [{l:'`',w:'w28',k:'`'},{l:'1',w:'w44',k:'1'},{l:'2',w:'w44',k:'2'},{l:'3',w:'w44',k:'3'},
    {l:'4',w:'w44',k:'4'},{l:'5',w:'w44',k:'5'},{l:'6',w:'w44',k:'6'},{l:'7',w:'w44',k:'7'},
    {l:'8',w:'w44',k:'8'},{l:'9',w:'w44',k:'9'},{l:'0',w:'w44',k:'0'},{l:'-',w:'w44',k:'-'},
    {l:'=',w:'w44',k:'='},{l:'⌫',w:'w80',k:'backspace'}],
-  // QWERTY
   [{l:'⇥',w:'w54',k:'tab'},{l:'Q',w:'w40',k:'q'},{l:'W',w:'w40',k:'w'},{l:'E',w:'w40',k:'e'},
    {l:'R',w:'w40',k:'r'},{l:'T',w:'w40',k:'t'},{l:'Y',w:'w40',k:'y'},{l:'U',w:'w40',k:'u'},
    {l:'I',w:'w40',k:'i'},{l:'O',w:'w40',k:'o'},{l:'P',w:'w40',k:'p'},{l:'[',w:'w40',k:'['},
    {l:']',w:'w40',k:']'},{l:'\\',w:'w54',k:'\\'}],
-  // home
   [{l:'⇪',w:'w62',k:'caps'},{l:'A',w:'w40',k:'a'},{l:'S',w:'w40',k:'s'},{l:'D',w:'w40',k:'d'},
    {l:'F',w:'w40',k:'f'},{l:'G',w:'w40',k:'g'},{l:'H',w:'w40',k:'h'},{l:'J',w:'w40',k:'j'},
    {l:'K',w:'w40',k:'k'},{l:'L',w:'w40',k:'l'},{l:';',w:'w40',k:';'},{l:"'",w:'w40',k:"'"},
    {l:'↵',w:'w80',k:'enter'}],
-  // shift
   [{l:'⇧',w:'w80',k:'lshift'},{l:'Z',w:'w40',k:'z'},{l:'X',w:'w40',k:'x'},{l:'C',w:'w40',k:'c'},
    {l:'V',w:'w40',k:'v'},{l:'B',w:'w40',k:'b'},{l:'N',w:'w40',k:'n'},{l:'M',w:'w40',k:'m'},
    {l:',',w:'w40',k:','},{l:'.',w:'w40',k:'.'},{l:'/',w:'w40',k:'/'},{l:'⇧',w:'w95',k:'rshift'}],
-  // bottom — spacebar sized so bottom row ≈ row 0 width
-  // Row0: 13×40+62+13×5 = 647px
-  // Bot: 54+54+sp+54+54+4×5 = 236+sp → sp=411
   [{l:'Ctrl',w:'w54',k:'ctrl'},{l:'Alt',w:'w54',k:'lalt'},{l:'',w:'sp411',k:' '},
    {l:'Alt',w:'w54',k:'ralt'},{l:'Ctrl',w:'w54',k:'rctrl'}],
 ];
@@ -543,9 +473,10 @@ const FSEGS=[
   {c:'rr',t:'R. Ring',f:4},{c:'rp',t:'R. Pinky',f:7},
 ];
 
-// Map width class → flex proportion (relative units, base=40)
 const W2FLEX={'w20':0.6,'w28':0.7,'w40':1,'w44':1.1,'w54':1.35,'w62':1.55,'w70':1.75,
-              'w80':2,'w88':2.1,'w95':2.375,'w110':2.75,'sp411':10.275};
+             'w80':2,'w88':2.1,'w95':2.375,'w110':2.75,'sp411':10.275};
+
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 
 function buildKeyboard(cid,heatmap=false){
   const wrap=document.getElementById(cid); wrap.innerHTML='';
@@ -566,17 +497,13 @@ function buildKeyboard(cid,heatmap=false){
         const e=keyErrors[c]||0,r=keyCorrect[c]||0,tot=e+r;
         if(tot>0){
           const p=e/tot;
-          // Updated thresholds: green ≤5%, orange 6-20%, red >20%
           if(p>.20)       d.style.background='rgba(232,32,32,.38)';
           else if(p>.05)  d.style.background='rgba(247,162,106,.35)';
           else            d.style.background='rgba(74,222,128,.22)';
         }
       }
-
-      // Build inner content
       const sec = SECONDARY[k];
       if(k==='caps'){
-        // Caps lock: label + LED indicator (LED is absolutely positioned top-right via CSS)
         d.innerHTML=`<span class="caps-led" id="caps-led-${cid}"></span><span style="font-size:.62rem;font-weight:600">${l}</span>`;
       } else if(sec){
         d.innerHTML=`<span class="key-secondary">${esc(sec)}</span><span class="key-primary">${esc(l)}</span>`;
@@ -602,15 +529,13 @@ function buildKeyboard(cid,heatmap=false){
   wrap.appendChild(bar);
 }
 
-// ═══════════════════════════════════════════════
 // CONTENT
-// ═══════════════════════════════════════════════
-const FNAMES=['Sarah','Emma','Olivia','Ava','Isabella','Mia','Amelia','Harper','Evelyn','Abigail','Emily','Elizabeth','Sofia','Ella','Madison','Scarlett','Victoria','Aria','Grace','Chloe','Penelope','Layla','Riley','Zoey','Nora','Elise','Eleanor','Hannah','Lillian','Addison','Charlotte','Natalie','Leah','Audrey','Claire','Stella','Hazel','Lucy','Violet','Aurora','Savannah','Brooklyn','Anna','Ellie','Samantha','Diana','Naomi','Vivian','Piper','Maya','Autumn','Skylar'];
+const FNAMES=['Sarah','Emma','Olivia','Ava','Isabella','Mia','Amelia','Harper','Evelyn','Abigail','Emily','Elizabeth','Sofia','Ella','Madison','Scarlett','Victoria','Aria','Grace','Chloe','Penelope'];
 function maybeElise(n){return Math.random()<.05?'Elise':n;}
 function pf(){return maybeElise(FNAMES[Math.floor(Math.random()*FNAMES.length)]);}
 
 function pt(v){
-  const irr={go:'went',run:'ran',see:'saw',eat:'ate',give:'gave',take:'took',come:'came',make:'made',know:'knew',think:'thought',find:'found',tell:'told',feel:'felt',leave:'left',put:'put',bring:'brought',begin:'began',keep:'kept',hold:'held',write:'wrote',stand:'stood',hear:'heard',let:'let',mean:'meant',set:'set',meet:'met',pay:'paid',sit:'sat',speak:'spoke',lie:'lay',lead:'led',read:'read',grow:'grew',lose:'lost',fall:'fell',send:'sent',build:'built',understand:'understood',draw:'drew',break:'broke',spend:'spent',cut:'cut',rise:'rose',drive:'drove',buy:'bought',wear:'wore',choose:'chose',win:'won',ride:'rode',fly:'flew',swim:'swam',sing:'sang',ring:'rang',drink:'drank',sink:'sank',forget:'forgot',wake:'woke',catch:'caught',teach:'taught',fight:'fought',bring:'brought',think:'thought',seek:'sought',hide:'hid',bite:'bit',blow:'blew',throw:'threw',show:'showed'};
+  const irr={go:'went',run:'ran',see:'saw',eat:'ate',give:'gave',take:'took',come:'came',make:'made',know:'knew',think:'thought',find:'found',tell:'told',feel:'felt',leave:'left',put:'put',bring:'brought'};
   if(irr[v])return irr[v];
   if(v.endsWith('e'))return v+'d';
   if(v.match(/[^aeiou]y$/))return v.slice(0,-1)+'ied';
@@ -631,1486 +556,193 @@ function cap(s){return s.charAt(0).toUpperCase()+s.slice(1);}
 function ri(a,b){return Math.floor(Math.random()*(b-a+1))+a;}
 
 const SENTS=[
-  // Everyday life
   ()=>`${pf()} grabbed her coffee and headed out the door before the rain started.`,
   ()=>`The ${['morning','afternoon','evening'][ri(0,2)]} light filtered through the curtains and fell across the wooden floor.`,
   ()=>`He checked his phone three times before finally placing it face-down on the desk.`,
   ()=>`${pf()} always says that the best ideas arrive right before you fall asleep.`,
   ()=>`The old bookstore on Maple Street smelled like dust, coffee, and decades of good stories.`,
-  ()=>`They sat in comfortable silence, watching the city lights flicker on one by one.`,
-  ()=>`He forgot to buy milk again, which meant another trip to the corner store.`,
-  ()=>`The cat knocked the glass off the counter and walked away without a second glance.`,
-  ()=>`${pf()} spent the entire weekend reorganizing her bookshelves, first by color and then by height.`,
-  ()=>`The coffee maker gurgled to life at exactly 6:30, right on schedule.`,
-  ()=>`He left a sticky note on the fridge that simply read: "We need eggs."`,
-  ()=>`${pf()} took a long look at the map and decided to take the scenic route instead.`,
-  ()=>`The dog waited by the front door for three hours before anyone came home.`,
-  ()=>`She discovered that the shortcut she always used actually added seven minutes to her commute.`,
-  ()=>`He had been meaning to clean out the garage for two years and had still not started.`,
-  ()=>`${pf()} baked a loaf of sourdough bread every Sunday morning without exception.`,
-  ()=>`The neighbor's wind chimes kept him awake until he finally got up and closed the window.`,
-  ()=>`She found a twenty-dollar bill in a jacket pocket she had not opened since last winter.`,
-  ()=>`He always ordered the same thing at the diner, and the cook started making it before he sat down.`,
-  ()=>`${pf()} planted tomatoes in the spring and forgot about them until they had grown enormous.`,
-  ()=>`The smoke alarm went off because he was making toast, which happened at least twice a week.`,
-  ()=>`She read the same paragraph four times and still had no idea what it said.`,
-  ()=>`The library returned his overdue book with a handwritten note saying they had missed it.`,
-  ()=>`He arrived exactly on time, which everyone agreed was somehow more suspicious than being late.`,
-  ()=>`${pf()} reorganized the pantry on a Tuesday afternoon and felt an unreasonable sense of accomplishment.`,
-  ()=>`The meeting was rescheduled for the third time, and everyone pretended to be surprised.`,
-  ()=>`He made the same pasta every Friday night and had never once gotten tired of it.`,
-  ()=>`${pf()} ordered the daily special without reading the description and was delighted by what arrived.`,
-  // Tech
-  ()=>`The new firmware update broke three features that had worked perfectly fine the day before.`,
-  ()=>`She opened the terminal and typed the command from memory without checking the documentation.`,
-  ()=>`The API returned a 404 error for the fifth time in a row, and he started questioning everything.`,
-  ()=>`${pf()} pushed her changes and immediately watched the CI pipeline turn red.`,
-  ()=>`The database migration took twice as long as expected and locked the production server for six minutes.`,
-  ()=>`He spent two hours debugging what turned out to be a single misplaced semicolon.`,
-  ()=>`${pf()} refactored the entire module, and it ran three times faster with half the lines of code.`,
-  ()=>`The load balancer redistributed traffic seamlessly during the afternoon surge.`,
-  ()=>`He cloned the repository and realized he had been staring at a four-year-old branch.`,
-  ()=>`The pull request had forty-seven comments, and none of them agreed with each other.`,
-  ()=>`She deployed on a Friday afternoon and spent the entire weekend watching the error logs.`,
-  ()=>`The merge conflict was so tangled that he decided it was faster to rewrite the function from scratch.`,
-  ()=>`${pf()} set up the development environment in under twenty minutes, which was a new personal record.`,
-  ()=>`The server had been running for eight hundred days before anyone noticed the memory leak.`,
-  ()=>`He wrote a script to automate the task and spent three times as long on it as the task would have taken.`,
-  ()=>`The documentation said the function was deprecated, but it was still referenced in forty-two places.`,
-  ()=>`${pf()} reviewed the code, found the bug on the first read, and said nothing until the standup.`,
-  // Space & Quantum
-  ()=>`Light from that star took over four thousand years to reach our solar system.`,
-  ()=>`The quantum state collapsed the moment the detector registered any measurement at all.`,
-  ()=>`Scientists observed a neutron star merger that produced ripples in the fabric of spacetime.`,
-  ()=>`The probe passed through the asteroid belt with only minor trajectory corrections needed.`,
-  ()=>`Entangled particles behave as though the distance between them simply does not exist.`,
-  ()=>`The dark matter halo extended far beyond the visible edge of the galaxy.`,
-  ()=>`${pf()} calculated the orbital resonance and found it matched observations made centuries ago.`,
-  ()=>`The Heisenberg uncertainty principle means that position and momentum cannot both be known precisely.`,
-  ()=>`Jupiter's magnetic field generates the strongest radio emissions in our solar system.`,
-  ()=>`The Voyager probe crossed into interstellar space after a journey of over forty years.`,
-  ()=>`No information can travel faster than the speed of light, and this shapes everything we understand.`,
-  ()=>`The telescope captured an image of a galaxy that no longer exists in the form we see it.`,
-  ()=>`${pf()} mapped the cosmic microwave background and found an anomaly she could not immediately explain.`,
-  ()=>`A black hole with the mass of billions of suns sat at the center of an otherwise unremarkable galaxy.`,
-  ()=>`The mission required three gravity assists and a course correction executed to within a millisecond.`,
-  ()=>`The radio telescope array picked up a signal that repeated every seventeen hours without variation.`,
-  // Cedar Point
-  ()=>`The line for Steel Vengeance stretched all the way back to the midway, but nobody left early.`,
-  ()=>`She rode Top Thrill 2 for the first time and screamed so loudly that people three rows ahead heard her.`,
-  ()=>`Millennium Force drops riders three hundred and ten feet at speeds exceeding ninety miles per hour.`,
-  ()=>`The Magnum XL-200 opened in 1989 as the tallest roller coaster on Earth and changed the industry overnight.`,
-  ()=>`Cedar Point sits on a Lake Erie peninsula and holds more roller coasters than any other park in the world.`,
-  ()=>`Maverick twists and inverts through the ravine at speeds that feel completely unreasonable.`,
-  ()=>`He waited two hours for Raptor, the ride broke down for forty minutes, and he went straight back in line.`,
-  ()=>`Valravn holds riders on the edge of a ninety-degree drop for four full seconds before releasing them.`,
-  ()=>`${pf()} rode every coaster in the park before noon and came back for a second lap before dinner.`,
-  ()=>`Mean Streak was demolished and reborn as Steel Vengeance through a transformation no one saw coming.`,
-  ()=>`Gatekeeper soars over the entrance gates and inverts riders through two sweeping wing-over drops.`,
-  ()=>`Top Thrill Dragster launched riders from zero to one hundred and twenty miles per hour in under four seconds.`,
-  ()=>`The park's skyline looks like a forest of steel and airtime hills when viewed from across Lake Erie.`,
-  ()=>`He ate a funnel cake, rode Rougarou, and decided that this was exactly how a summer day should go.`,
-  ()=>`Raptor inverts riders six times through a layout that has never once felt stale after all these years.`,
-  ()=>`The Gemini racing coaster runs on parallel tracks and turns every ride into a friendly competition.`,
-  ()=>`Blue Streak remains one of the park's oldest wooden coasters and still delivers genuine airtime.`,
-  ()=>`The midway smelled like fried food and sunscreen, and the sound of distant screaming was constant.`,
-  ()=>`She had ridden Steel Vengeance eleven times in a single day and was seriously considering a twelfth.`,
-  ()=>`Millennium Force was the first roller coaster to exceed three hundred feet and still draws long lines.`,
-  ()=>`He watched the Top Thrill Dragster launch from the midway and felt his stomach drop in sympathy.`,
-  ()=>`The airtime on Steel Vengeance is so sustained that riders float free of their seats for several seconds.`,
-  ()=>`${pf()} screamed through every inversion on Raptor and then immediately asked to go again.`,
-  ()=>`Cedar Point gets storms rolling in off Lake Erie that build fast and clear out in under an hour.`,
-  ()=>`Wicked Twister sent riders backward up a vertical spike at the end of a twisting impulse track.`,
-  ()=>`The Corkscrew was one of the first inverting coasters ever constructed and has outlasted many of its descendants.`,
-  ()=>`The park opened its gates at nine, and the first riders reached Steel Vengeance before nine fifteen.`,
-  ()=>`He rode Maverick in the front row and spent the entire first drop wondering if he had made a mistake.`,
-  ()=>`${pf()} planned her Cedar Point trip around the FastLane schedule and still waited forty minutes for Dragster.`,
-  ()=>`The park's record attendance day coincided with a heat wave that made the lake look very appealing.`,
-  ()=>`Gatekeeper's wing seats carry riders over the entrance plaza with their legs dangling in open air.`,
-  // Nature
-  ()=>`The thunderstorm rolled in from the west and turned the afternoon sky a shade of greenish grey.`,
-  ()=>`Fireflies appeared in the meadow at dusk, blinking in soft and irregular rhythms across the grass.`,
-  ()=>`The river carved its path through limestone over thousands of years without any urgency at all.`,
-  ()=>`${pf()} found a great horned owl perched motionless on the fence post at the edge of the property.`,
-  ()=>`The northern lights rippled across the sky in curtains of green and violet that left everyone silent.`,
-  ()=>`A black bear wandered through the campsite and ate every marshmallow before anyone could react.`,
-  ()=>`The tide came in faster than expected and stranded their cooler on a sandbar fifty feet from shore.`,
-  ()=>`She identified seven different species of mushroom in a single afternoon without leaving the trail.`,
-  ()=>`The fog rolled in off the water and turned the familiar coastline into something unrecognizable.`,
-  ()=>`He watched the hawk circle for ten minutes before it folded its wings and dropped like a stone.`,
-  // Food & life
-  ()=>`The sourdough starter bubbled overnight, and by morning it had doubled in size perfectly.`,
-  ()=>`${pf()} made the best chili in three counties and never once shared the complete recipe with anyone.`,
-  ()=>`He burned the garlic but used it anyway, because throwing food away felt genuinely wasteful.`,
-  ()=>`The farmers market opened at seven, and by eight the best heirloom tomatoes were already gone.`,
-  ()=>`She put the leftovers in the fridge and rediscovered them three weeks later in a very changed state.`,
-  ()=>`The restaurant was a fifteen-minute drive from anywhere and always worth every minute of it.`,
-  // History & culture
-  ()=>`The printing press made information cheap enough that ordinary people could afford to be wrong in public.`,
-  ()=>`The bridge had been rebuilt four times, and each version was described as temporary at the time.`,
-  ()=>`He studied the old photograph and realized that the building behind the subject no longer existed.`,
-  ()=>`${pf()} wrote her dissertation on a topic so obscure that she became the world's leading authority by default.`,
-  ()=>`The library held books that had not been checked out since 1962, and they were in perfect condition.`,
-  ()=>`Languages that have no word for blue still have speakers who can see it perfectly well.`,
-  // Sports
-  ()=>`The final game was decided in overtime by someone who had barely played the whole regular season.`,
-  ()=>`She broke the record by four seconds and made it look completely effortless from the stands.`,
-  ()=>`He trained every morning at five o'clock for three years and finished the race in second place.`,
-  ()=>`The underdog team won the championship and had the good grace not to act surprised about it.`,
-  // More everyday life
-  ()=>`${pf()} set three alarms and still managed to sleep through all of them without any apparent effort.`,
-  ()=>`The umbrella was in the car, which was exactly where it was not needed at that moment.`,
-  ()=>`He spent forty minutes looking for his keys before finding them in the lock on the front door.`,
-  ()=>`${pf()} bought a houseplant and kept it alive for an entire year, which felt like a genuine achievement.`,
-  ()=>`The podcast had been in his queue for three months and he deleted it without ever pressing play.`,
-  ()=>`She made a grocery list, left it on the counter, and still managed to buy most of the right things.`,
-  ()=>`He rearranged his furniture at midnight and immediately decided he preferred the original layout.`,
-  ()=>`${pf()} started a journal on the first of January and wrote in it consistently until the third.`,
-  ()=>`The candle claimed to smell like a forest and actually came surprisingly close to delivering on that.`,
-  ()=>`He finally fixed the squeaky step on the stairs and immediately missed the sound as a warning system.`,
-  ()=>`${pf()} discovered that her commute was much more bearable with the right playlist and noise-canceling headphones.`,
-  ()=>`The leftovers tasted better the next day, as leftovers reliably and stubbornly tend to do.`,
-  ()=>`He called his mom on a Thursday for no specific reason and they talked for over an hour.`,
-  ()=>`The hardware store employee knew exactly where everything was and walked him directly to the right aisle.`,
-  ()=>`${pf()} learned to make one meal extremely well and served it to every guest without any apology.`,
-  ()=>`The afternoon thunderstorm cooled everything down by twelve degrees in under twenty minutes.`,
-  ()=>`He folded the laundry while watching television and ended up watching television for an extra hour.`,
-  ()=>`${pf()} kept a running list of books she meant to read and added to it faster than she finished them.`,
-  ()=>`The new coffee shop opened on a Tuesday and had a line out the door by Thursday morning.`,
-  ()=>`He repaired the fence himself on a Saturday afternoon and felt deeply satisfied for three whole days.`,
-  // More tech
-  ()=>`The code review caught an off-by-one error that had been silently corrupting output for six weeks.`,
-  ()=>`${pf()} wrote the unit tests after the fact and discovered they were actually useful when she ran them.`,
-  ()=>`The container failed to start because a single environment variable had a trailing whitespace character.`,
-  ()=>`He renamed the variable to something descriptive and the entire function became self-explanatory overnight.`,
-  ()=>`The staging environment worked perfectly, which made the production failure even more difficult to explain.`,
-  ()=>`${pf()} opened a ticket for the bug on Monday and closed it with a one-line fix by Monday afternoon.`,
-  ()=>`The regex matched everything it was supposed to match and a surprising number of things it was not.`,
-  ()=>`He refactored the configuration file and accidentally introduced three new problems solving the original one.`,
-  ()=>`The automated test suite ran in nine seconds flat and caught the regression before anyone noticed it.`,
-  ()=>`${pf()} turned the complex nested callback into a clean async function and the diff was forty lines shorter.`,
-  ()=>`The type errors were the documentation the codebase had been silently begging for all along.`,
-  ()=>`He pushed directly to main by accident and spent the next hour pretending that everything was fine.`,
-  ()=>`The microservice communicated perfectly with every other service except the one it actually needed most.`,
-  ()=>`${pf()} wrote a detailed comment explaining why the hack was necessary and dated it three years ago.`,
-  ()=>`The profiler showed that eighty percent of the time was spent in a function called just twice per request.`,
-  ()=>`He set up the monitoring dashboard and watched it reveal problems that had existed for months unobserved.`,
-  // More space & science
-  ()=>`The exoplanet orbited its star at a distance that placed it precisely within the habitable zone.`,
-  ()=>`Quantum tunneling allows particles to pass through barriers that classical physics would call impassable.`,
-  ()=>`The interferometer detected gravitational waves so faint that they moved its mirrors by a fraction of a proton.`,
-  ()=>`${pf()} analyzed the spectrograph and identified three elements that had no business being in that star's atmosphere.`,
-  ()=>`The simulation ran for six months on the supercomputer and modeled eleven seconds of stellar evolution.`,
-  ()=>`Cosmic inflation stretched the universe faster than light in the first fraction of a second after the Big Bang.`,
-  ()=>`The ice beneath Europa's surface may harbor an ocean larger than all of Earth's oceans combined.`,
-  ()=>`She measured the redshift and determined the galaxy was receding at nearly three percent of the speed of light.`,
-  ()=>`The neutrino passed through the entire planet without interacting with a single atom along the way.`,
-  ()=>`${pf()} observed the pulsar timing array and found evidence of a gravitational wave background permeating all of space.`,
-  ()=>`The asteroid's trajectory was altered by less than one degree, which was enough to change everything over a century.`,
-  ()=>`Solar wind carves the heliosphere into a teardrop shape as our star moves through the interstellar medium.`,
-  // More Cedar Point
-  ()=>`Iron Dragon swings riders over the lagoon on a suspended track that has been doing so since 1987.`,
-  ()=>`The queue for Steel Vengeance winds through a themed mining camp that is genuinely worth paying attention to.`,
-  ()=>`She rode Magnum XL-200 in the back row for the first time and understood immediately why enthusiasts love it.`,
-  ()=>`Top Thrill 2 added a spike with secondary launch elements that send riders into a mid-air reversal.`,
-  ()=>`The park closes in October for HalloWeekends and transforms into something entirely different after dark.`,
-  ()=>`He counted his laps on Millennium Force by keeping track of the different row numbers he had sat in.`,
-  ()=>`Rougarou was converted from a stand-up coaster to a floorless model and the ride improved considerably.`,
-  ()=>`${pf()} made it onto every coaster by closing time and declared it the best day she had ever had at a theme park.`,
-  ()=>`The lift hill on Steel Vengeance climbs two hundred and five feet before releasing riders into the first drop.`,
-  ()=>`Cedar Point has been operating continuously since 1870, which makes it one of the oldest amusement parks in the country.`,
-  ()=>`He watched the Millennium Force trains dispatch every sixty seconds and marveled at the operational efficiency.`,
-  ()=>`The view from the top of Valravn's lift hill includes the lake, the peninsula, and the entire midway below.`,
-  // More nature
-  ()=>`The migration arrived two weeks early, and the birders who had not yet arrived were deeply unhappy about it.`,
-  ()=>`She counted seventeen different wildflower species in a single meadow that had been mowed the previous summer.`,
-  ()=>`The tornado touched down three miles east and left a narrow corridor of fallen trees perfectly parallel to each other.`,
-  ()=>`He found a shed snakeskin draped over a branch and spent a long time admiring how perfectly intact it was.`,
-  ()=>`${pf()} kayaked the river at dawn when the mist was still on the water and saw nothing but herons and silence.`,
-  ()=>`The coyote crossed the road without hesitating and vanished into the brush before anyone reached for a camera.`,
-  ()=>`The first frost came overnight and turned the garden into something that looked like it had been spun from glass.`,
-  ()=>`She tracked the lunar cycle for a full year and planted her garden according to the schedule without apology.`,
-  ()=>`The creek had not flooded in forty years, and then it flooded twice in the same spring.`,
-  ()=>`He sat on the porch during the storm and watched the lightning count the miles as it moved away to the east.`,
-  // More food
-  ()=>`${pf()} found the recipe her grandmother had written on an index card in 1971 and made it exactly as written.`,
-  ()=>`The bread came out of the oven twenty minutes late and was the best bread anyone in the house had ever eaten.`,
-  ()=>`He made the curry too spicy on purpose because nobody ever complained about it being too spicy.`,
-  ()=>`${pf()} tasted the soup, adjusted it four times, and decided the original version had been better after all.`,
-  ()=>`The eggs were scrambled slowly over low heat, which took patience and produced results that justified the wait.`,
-  ()=>`She grew more zucchini than her family could eat and left bags of it on neighbors' porches anonymously.`,
-  ()=>`The cheese had been aging for two years and tasted like something that had been waiting to be eaten for exactly that long.`,
-  // More history & culture
-  ()=>`The letter had been sealed for over a century and contained remarkably ordinary news about weather and travel.`,
-  ()=>`${pf()} translated the document and found that the dramatic passage was actually a receipt for twelve bushels of grain.`,
-  ()=>`The town had named a street after the wrong person for sixty years and corrected it quietly one winter.`,
-  ()=>`He read the first edition and could not find a single difference from the version he already owned.`,
-  ()=>`The building had been a bank, a dance hall, a laundry, and a law office before anyone thought to preserve it.`,
-  ()=>`${pf()} studied the census records and traced her family back seven generations to a single farm in the same county.`,
-  ()=>`The song had been attributed to the wrong composer for forty years before anyone bothered to check the original manuscripts.`,
-  // More sports
-  ()=>`He qualified for the marathon with three seconds to spare and cried at the finish line before he crossed it.`,
-  ()=>`${pf()} played the same position for fifteen years and retired before anyone had figured out how to replace her.`,
-  ()=>`The pitcher threw nine innings on three days' rest and gave up exactly nothing until the final out.`,
-  ()=>`She entered the tournament unseeded, won four consecutive matches, and did not seem especially surprised.`,
-  ()=>`The coach called a timeout with six seconds left, and the play that came out of it was something nobody had practiced.`,
-  ()=>`He crossed the finish line in last place, which was still forty seconds faster than he had ever run before.`,
-  ()=>`${pf()} competed in her first triathlon at fifty-three and finished in the top third of her age group.`,
-  // Animals
-  ()=>`The crow remembered the face of the researcher who had banded it and avoided her specifically for three years.`,
-  ()=>`${pf()} discovered that her cat had a second family three houses down and had been eating two dinners every night.`,
-  ()=>`The whale surfaced thirty feet from the kayak and exhaled a column of mist that drifted slowly downwind.`,
-  ()=>`He found a box turtle in the garden that had been there every summer for the past eleven years.`,
-  ()=>`The dog learned to open the cabinet on its own and exercised considerable restraint about when to use that skill.`,
-  ()=>`${pf()} watched the octopus solve the puzzle box in under two minutes and felt genuinely outpaced.`,
-  ()=>`The deer stood in the yard for forty minutes before deciding to leave entirely on its own schedule.`,
-  // Travel & places
-  ()=>`The train arrived on time despite everything, which felt like a minor miracle to everyone aboard.`,
-  ()=>`${pf()} got lost in the city's transit system and accidentally found the best meal she had on the entire trip.`,
-  ()=>`He booked the window seat for the overnight flight and watched the lights of three different cities pass below.`,
-  ()=>`The hotel had a pool that nobody used and a breakfast room that everyone crowded into before seven in the morning.`,
-  ()=>`${pf()} drove the coastal highway in both directions over two days and found the return trip even more beautiful.`,
-  ()=>`The map app rerouted him through a neighborhood he had never seen despite living in the city for a decade.`,
-  ()=>`She packed for a four-day trip in a bag that fit in the overhead bin and felt unreasonably proud of herself.`,
-  // Work & ambition
-  ()=>`${pf()} asked for the promotion in the same email where she laid out exactly why she deserved it, and got it.`,
-  ()=>`He changed careers at forty-one and spent the first year feeling like a beginner, which turned out to be useful.`,
-  ()=>`The presentation went twenty minutes over time because the audience kept asking questions, which was a good sign.`,
-  ()=>`${pf()} sent the email she had drafted seventeen times and got a reply within four minutes.`,
-  ()=>`He said no to three meetings in one week and got more done than he had in the previous month combined.`,
-  ()=>`The mentor gave her one piece of advice and it was so specific and so correct that she used it for a decade.`,
-  // More everyday life
-  ()=>`The neighbor left a note about the recycling and somehow managed to be completely right and completely annoying simultaneously.`,
-  ()=>`${pf()} organized her entire inbox in a single Saturday afternoon and felt transformed for approximately two days.`,
-  ()=>`He tried a new coffee shop every week for a month and then went straight back to the original one.`,
-  ()=>`The dentist told her she had been brushing too hard for twenty years, which was not the compliment she expected.`,
-  ()=>`${pf()} rewatched the same show for the fourth time and noticed something in the background that changed everything.`,
-  ()=>`He spent the entire commute composing a firmly worded email and deleted it before he reached his stop.`,
-  ()=>`The cat sat on his keyboard at the worst possible moment and somehow fixed a bug he had been chasing for two days.`,
-  ()=>`${pf()} decided to take up running in November, which everyone agreed was the optimal month for making that decision.`,
-  ()=>`He wore his headphones around his neck the entire meeting even though they were not connected to anything.`,
-  ()=>`The parking meter had three minutes left when she arrived, which she took as a sign that the day would go well.`,
-  ()=>`${pf()} made the bed every morning for thirty days straight and reported that it did not change her life but felt nice.`,
-  ()=>`He answered "good" on autopilot and then realized the question had been "is this seat taken."`,
-  ()=>`The elevator door closed just as she reached it, and she shared a knowing look with the person it closed on.`,
-  // More tech
-  ()=>`The linter reported two hundred and seventeen warnings, and he fixed them all in alphabetical order.`,
-  ()=>`${pf()} wrote the error handling last, which meant she also wrote it the most carefully.`,
-  ()=>`The codebase had four different date formatting utilities and none of them produced the same output.`,
-  ()=>`He opened a ten-year-old branch out of curiosity and found exactly the feature he had spent a week rebuilding.`,
-  ()=>`${pf()} added the one-line fix, reviewed the diff seventeen times, and still lost sleep until the deploy finished.`,
-  ()=>`The function had been marked as deprecated since 2018, and it was called in more places than any other function in the system.`,
-  ()=>`He changed the variable name and the PR got eleven comments, none of which were about the variable name.`,
-  ()=>`${pf()} wrote a script that ran in four milliseconds and a comment explaining it that took twenty minutes to read.`,
-  ()=>`The memory usage was flat for eight months and then spiked on a Tuesday with no clear cause and never came back down.`,
-  ()=>`He asked the senior engineer to review his code and received back a single comment: "clever."`,
-  // More space & science
-  ()=>`The magnetar's magnetic field is strong enough to affect electron orbitals at a distance of a thousand kilometers.`,
-  ()=>`${pf()} ran the simulation again and got a different result from the same initial conditions, which was the entire problem.`,
-  ()=>`The comet was visible with the naked eye for eleven days before it swung back toward the outer solar system.`,
-  ()=>`Bose-Einstein condensate forms when atoms are cooled to within a fraction of a degree of absolute zero.`,
-  ()=>`The radio burst repeated on a schedule so precise that the team initially suspected instrument error.`,
-  ()=>`${pf()} identified the isotope ratio in the sample and determined the rock had not been touched for two billion years.`,
-  ()=>`The rings of Saturn are younger than the dinosaurs and are slowly spiraling inward toward the planet.`,
-  ()=>`He tracked the asteroid's orbit backward four hundred years and found it had passed closer to Earth than the moon.`,
-  // More Cedar Point
-  ()=>`Millennium Force holds the record for most consecutive operations of any coaster at the park without a refurbishment.`,
-  ()=>`${pf()} rode every row of Steel Vengeance and wrote down the airtime moments for each one in a small notebook.`,
-  ()=>`The queue for Maverick winds through a canyon-themed area that is easy to appreciate when the line moves slowly.`,
-  ()=>`He proposed on the lift hill of Millennium Force and reported that the timing worked out perfectly.`,
-  ()=>`Raptor's elements include a vertical loop, two flat spins, two inline twists, and a zero-g roll in sequence.`,
-  ()=>`${pf()} made it to the park for opening day three years running and considered it a reliable annual tradition.`,
-  ()=>`The midway food options include funnel cakes, corn dogs, and a turkey leg that looks designed for theatrical effect.`,
-  ()=>`He studied the park map the night before and still spent twenty minutes finding Maverick in the morning.`,
-  // More nature
-  ()=>`The river rose six feet overnight after the rain and left a line of debris at exactly that height on the fence.`,
-  ()=>`${pf()} sat in the blind for four hours before the woodpecker appeared and stayed for less than forty seconds.`,
-  ()=>`The mushroom had been growing under the oak for forty years and was wider than the wheelbase of his car.`,
-  ()=>`He watched the sandhill cranes fly over in a ribbon that stretched from one horizon to the other for ten minutes.`,
-  ()=>`The beaver dam had raised the water table enough to bring back three species of frog that had not been seen in decades.`,
-  ()=>`${pf()} found a luna moth on the porch screen and spent an hour reading about them before she let it go.`,
-  ()=>`The tide pool contained more variety in one square foot than most people noticed in an entire beach visit.`,
-  // More food
-  ()=>`He made the roux perfectly and then got distracted and burned the onions, which set the entire dish back forty minutes.`,
-  ()=>`${pf()} ate at the same ramen shop every Friday for two years and still had not tried half the menu.`,
-  ()=>`The tomatoes from the garden tasted so much better than the store-bought ones that it made grocery shopping feel dishonest.`,
-  ()=>`He read the recipe twice, ignored two of the steps, and produced something that everyone agreed was actually better.`,
-  ()=>`${pf()} brought the dish to the potluck and came home with an empty container and three requests for the recipe.`,
-  ()=>`The paella took three hours, required four separate pans, and disappeared in under twelve minutes.`,
-  // More history & culture
-  ()=>`The clock tower had been five minutes fast since 1937 and the town had stopped correcting visitors about it.`,
-  ()=>`${pf()} found the original deed in the filing cabinet and learned the house had changed hands eleven times in ninety years.`,
-  ()=>`The census recorded his great-great-grandfather's occupation as "cordwainer," which she had to look up.`,
-  ()=>`He read the plaque on the wall and discovered the building had been a speakeasy for most of its most interesting years.`,
-  ()=>`The handwriting in the margin of the 1908 textbook said "this is wrong" next to a theory that was later proven right.`,
-  ()=>`${pf()} traced the family recipe back to a newspaper clipping from 1952 and noticed it called for an ingredient nobody recognized.`,
-  // More sports
-  ()=>`The shot went in off the backboard from half court as time expired and nobody in the building believed it.`,
-  ()=>`${pf()} started the season ranked last in the division and finished it with the second-best record in the conference.`,
-  ()=>`He played through a broken finger for six weeks and did not mention it until the season was over.`,
-  ()=>`The referee made the right call and got booed by everyone in the stadium, which is how you know it was correct.`,
-  ()=>`${pf()} retired the number on a Tuesday in a quiet ceremony that felt more appropriate than any parade would have.`,
-  ()=>`He ran the same route every morning for twelve years and the route had never once felt identical to any previous run.`,
-  // More animals
-  ()=>`The hummingbird returned to the same feeder every year and ${pf()} had been refilling it for eleven consecutive summers.`,
-  ()=>`He watched the raven solve the puzzle, fail, adjust its approach, and succeed on the third attempt without repeating the failure.`,
-  ()=>`The fox crossed the yard every Tuesday evening at the same time with a precision that felt either eerie or scheduled.`,
-  ()=>`${pf()} identified the call without looking up and knew the bird was at least three hundred feet up in the canopy.`,
-  ()=>`The snapping turtle had been in the pond before the pond was installed and showed no signs of reconsidering its residency.`,
-  // More travel
-  ()=>`The ferry was forty minutes late and the replacement driver knew a shortcut that got them there ten minutes early anyway.`,
-  ()=>`${pf()} spent three days in the city without entering a single tourist site and had the best trip of the decade.`,
-  ()=>`He read the phrasebook on the plane, forgot all of it by landing, and found that gestures covered almost everything.`,
-  ()=>`The hostel was noisier than advertised and the location was better than anything the reviews had suggested.`,
-  ()=>`${pf()} took the slow train instead of the fast one and arrived having seen three valleys she had not planned to see.`,
-  // More work
-  ()=>`The client wanted everything changed and then approved the original version two weeks later without acknowledging the detour.`,
-  ()=>`${pf()} gave the same advice in every one-on-one for six months before someone finally acted on it and it worked immediately.`,
-  ()=>`He turned down the role with the higher salary and spent the following year consistently glad he had done so.`,
-  ()=>`The project was behind schedule for reasons everyone understood and nobody would say out loud in the status meeting.`,
-  ()=>`${pf()} finished the report an hour early, reviewed it once more, found nothing wrong, and submitted it feeling mildly suspicious.`,
 ];
 
 const STORIES=[
-  `The signal had traveled for nine thousand years before anyone was listening. It arrived on a Tuesday, in the form of a repeating prime sequence embedded in the static of a routine radio survey. The astronomer who spotted it was a junior researcher who almost overlooked the data entirely. She ran the analysis three times, then called her supervisor, who called the director, who called eleven different government officials before sunrise. By the following morning, the entire field had agreed on one thing: they were not alone. The signal said nothing that could be translated. It simply said that something knew the language of mathematics and had something to say.`,
-  `Steel Vengeance is unlike any coaster in the world. It was built on the bones of Mean Streak, a wooden coaster that stood for nearly three decades before Rocky Mountain Construction arrived and reimagined the entire structure with steel rails and modern design software. The result broke records that nobody had thought to set yet. It holds more airtime than any other coaster on the planet. Riders float weightless through inversion after inversion, dropped into ravines and shot skyward with a relentlessness that feels personal. Most people walk off in silence. Some people cry. A few immediately find the end of the line and do it again without a moment's hesitation.`,
-  `She had been writing code for twenty years when the compiler told her something she did not expect. The error message referenced a function she had written in 2009 for a project that was deprecated in 2013 and deleted in 2017. The function had no business being there. She opened the file, traced the dependency chain, and spent three hours discovering that an intern had copied an entire module from a legacy repository without reading it. The module was actually better than anything they were currently using. She refactored the whole system around it over the weekend, and it shipped without incident the following Thursday.`,
-  `The quantum computer solved the problem in eleven milliseconds. The classical supercomputer, running in parallel as a control, was still working on it seventeen days later. The problem itself was not particularly exotic: a pathfinding challenge across a simulated protein-folding landscape. But it demonstrated something the researchers had suspected for years and had been reluctant to publish prematurely. Quantum advantage was not theoretical anymore. It was sitting in a climate-controlled room in an unremarkable building, and it was about to change everything from drug design to cryptography to materials science in ways that nobody had yet fully mapped out.`,
-  `Maverick opened in 2007 and immediately became the most aggressive coaster in the park. It launched riders twice, inverted them through a heartline roll, and squeezed them through a ravine so tight that the clearances were measured in inches. The ride had a troubled first season. A wing element was removed after testing revealed stress levels that engineers were not comfortable accepting. The final layout was shorter than originally planned but somehow more intense for it. Cedar Point had built something that felt genuinely feral. It lacked the height of Millennium Force and the airtime of Steel Vengeance, but it had something harder to define: a quality that kept enthusiasts ranking it among their favorites year after year.`,
-  `The expedition found the glacier had retreated another three kilometers since the last survey. The lead glaciologist had been measuring this same ice mass for twenty-two years, and she still found herself pausing at the edge, staring at the bare rock that water had covered since the last ice age. Her assistant asked if she ever got used to it. She thought about the question seriously before answering. She said that you do not get used to it. You just learn to use the feeling as fuel for the work, because the alternative is standing at the edge of the world watching it change and doing absolutely nothing about it.`,
-  `He learned to type in the eighth grade on a keyboard with no feedback worth feeling. Twenty years later, he sat in front of a mechanical keyboard with sixty-gram actuation springs and could not imagine how he had ever communicated in writing before. The difference was not purely tactile. There was something about the sound that organized his thoughts. The rhythm of keystrokes became a kind of metronome for his sentences. When he was writing well, the clicks came fast and even. When he was struggling, they came slow and scattered with long pauses in between. The keyboard had become a diagnostic tool for the quality of his thinking, without him ever consciously deciding that it would be.`,
-  `Valravn stands at the entrance to Cedar Point and drops riders off a vertical cliff that leaves them hanging over the midway for four full seconds before release. It is one of the tallest dive coasters ever constructed. The drop is ninety degrees, perfectly straight down, and the moment of release after that four-second hold feels less like falling and more like the world has simply decided to move very quickly downward. The inversions that follow feel almost gentle by comparison. Riders come off smiling in a way that is not quite the smile of someone who had fun. It is more the smile of someone who just convinced themselves to do something they were genuinely not sure they could manage.`,
-  `The library had been scheduled for demolition three separate times. Each time, a different group showed up and found a reason to delay the process. The first delay was because someone discovered the building had been designed by a noted architect whose other works were considered historic. The second delay was a budget dispute that stretched through two fiscal years. The third delay happened when a local historian found a cache of letters in the basement suggesting the building had served as an informal post office during a period when the official one had burned down. By the time the paperwork finally cleared, a community group had raised enough money to restore it instead, and it reopened two years later with considerably better lighting and a coffee cart near the entrance.`,
-  `She started keeping a list of things she wanted to learn. It began with two items: pick a lock, and identify constellations without an app. Over the following year, the list grew to forty-seven entries, and she crossed off thirty-one of them. She learned to identify edible mushrooms, to change a car tire in under eight minutes, to read a topographic map, and to make a passable croissant on her second attempt. The lock-picking took six weeks. The constellations took one clear night in a field outside the city, far from the light pollution she had grown up inside, where she lay on her back in the summer grass and felt, for the first time in years, genuinely astonished by how large things actually were.`,
-  `The town had been known for one thing for eighty years: the factory at the edge of it that made a particular kind of industrial fastener used in the construction of large bridges. When the factory closed, the town spent a decade trying to figure out what to do next. They tried tourism, which worked a little. They tried attracting technology companies, which did not work at all. Eventually, they converted the factory building into a mixed-use space and leased it to twelve different small businesses simultaneously. A coffee roaster took the loading dock. A ceramics studio took the old break room. The largest floor became an indoor market on weekends. Nobody planned it this way. It just became the thing that worked, and the town built its next chapter around it.`,
-  `She had been a competitive swimmer for twenty years when the doctor told her she would not be able to compete again. The injury was not catastrophic. It was just cumulative: the shoulder had absorbed too many thousands of strokes and was done absorbing them. She spent six months being miserable about it, which she later described as a reasonable response. Then she started coaching. The first group she worked with was a group of adults who had never learned to swim as children and were learning in their forties and fifties. They were terrible at it. They were also the most motivated people she had ever worked with, and watching them get better was, she admitted eventually, better than most of her own races had been.`,
-  `The software had been running continuously for eleven years when they finally decided to rewrite it. The original developer had left the company in the second year. The documentation described a system that no longer existed in that form. The new team spent three months reading the code before writing a single line of their own. What they found surprised them. The original code was not elegant. It was also not wrong. It had been patched and extended by dozens of different people over a decade, and it had absorbed every change without breaking. The rewrite took eighteen months. The new version was cleaner, faster, and better in every measurable way. It also failed in three different ways in the first week that the old system had never once failed.`,
-  `The trail was supposed to take four hours. Eight hours in, they were still two miles from the trailhead, it was getting dark, and one of them had twisted her ankle on a root she had been warned about specifically. The other three took turns helping her along the path with a patience that surprised all of them. Nobody panicked. Nobody blamed anyone. They used their headlamps when the light failed, ate the emergency granola bars they had brought mostly as a joke, and arrived at the parking lot at ten in the evening. On the drive home they agreed it was the best hike they had ever done, which said something about what makes a good story versus what makes a good afternoon.`,
-  `The record had stood for forty-three years. The woman who held it had set it at age twenty-two in conditions that witnesses described as ideal: calm wind, firm ground, the right temperature. She had gone on to have a distinguished career but had never gotten close to the number again. The runner who broke it was twenty-four, and she broke it by less than a second on a day that was too warm and in conditions that nobody would have called ideal. The old record holder was in the crowd. She was the first person on her feet when the clock stopped, and she stayed standing longer than anyone else around her.`,
-  // ── NASA / Apollo / Artemis / Mars ──
-  ()=>`Apollo 11 landed on the Sea of Tranquility on July 20, 1969, and Neil Armstrong became the first human to walk on the Moon.`,
-  ()=>`The Saturn V rocket that carried Apollo astronauts to the Moon remains the tallest, heaviest, and most powerful rocket ever brought to operational status.`,
-  ()=>`Apollo 13 lost its service module oxygen tank on April 13, 1970, and the crew used the lunar module as a lifeboat to return safely to Earth.`,
-  ()=>`The Artemis program aims to return humans to the Moon and establish a sustainable presence there before sending crewed missions onward to Mars.`,
-  ()=>`Artemis I sent the Orion spacecraft on an uncrewed loop around the Moon in November 2022, traveling farther from Earth than any human-rated vehicle had gone before.`,
-  ()=>`The Space Launch System is the most powerful rocket NASA has ever built, producing more than eight point eight million pounds of thrust at liftoff.`,
-  ()=>`Artemis III is planned to land astronauts near the lunar south pole, a region that has never been visited and may contain water ice in permanently shadowed craters.`,
-  ()=>`The Gateway lunar space station will orbit the Moon and serve as a staging point for Artemis crews descending to the surface and returning to deep space.`,
-  ()=>`NASA's Perseverance rover landed in Jezero Crater on Mars in February 2021 and has been collecting rock core samples that may one day return to Earth for analysis.`,
-  ()=>`The Ingenuity helicopter flew on Mars alongside Perseverance, completing over seventy flights and proving that powered flight is possible in the thin Martian atmosphere.`,
-  ()=>`Mars has two small moons named Phobos and Deimos, both of which are thought to be captured asteroids rather than objects that formed alongside the planet.`,
-  ()=>`The Curiosity rover has been driving across Gale Crater since 2012 and has climbed more than a thousand feet up the slopes of Mount Sharp.`,
-  ()=>`NASA's Voyager 1 spacecraft, launched in 1977, is now more than twenty-three billion kilometers from the Sun and remains in contact with Earth.`,
-  ()=>`The Hubble Space Telescope has been observing the universe since 1990 and has contributed to over seventeen thousand scientific papers across its lifetime.`,
-  ()=>`The James Webb Space Telescope launched on December 25, 2021 and began delivering infrared images of galaxies, nebulae, and exoplanet atmospheres that surpassed all expectations.`,
-  ()=>`Pioneer 10 was the first spacecraft to travel through the asteroid belt and fly past Jupiter, completing its primary mission in 1973.`,
-  ()=>`The New Horizons probe flew past Pluto in July 2015, revealing mountains of water ice, a heart-shaped nitrogen plain, and a hazy layered atmosphere.`,
-  ()=>`NASA's OSIRIS-REx collected a sample from the asteroid Bennu and returned it to Earth in September 2023, giving scientists pristine material from the early solar system.`,
-  ()=>`The Parker Solar Probe has made the closest approaches to the Sun of any spacecraft in history, flying through the outer corona at speeds exceeding four hundred thousand miles per hour.`,
-  ()=>`Skylab was America's first space station and hosted three crews between 1973 and 1974 before its orbit decayed and it reentered the atmosphere in 1979.`,
-  ()=>`The Space Shuttle program flew one hundred and thirty-five missions between 1981 and 2011, launching satellites, assembling the International Space Station, and deploying the Hubble Space Telescope.`,
-  ()=>`The International Space Station has been continuously occupied since November 2, 2000, and has hosted astronauts from nineteen different countries over that time.`,
-  ()=>`NASA's Cassini spacecraft orbited Saturn for thirteen years and revealed the structure of its rings, the geysers of Enceladus, and the methane lakes of Titan.`,
-  ()=>`The Lunar Reconnaissance Orbiter has been mapping the Moon since 2009 and has produced detailed imagery that mission planners are using to select Artemis landing sites.`,
-  ()=>`DART, the Double Asteroid Redirection Test, deliberately collided with the moonlet Dimorphos in September 2022 and shortened its orbital period, proving that asteroid deflection is possible.`,
-  // ── Elise, Gunner, Luna, Yoshi, Daisy ──
-  ()=>`Elise laughed at something Gunner said and immediately covered her face because the laugh was loud and she did not care at all.`,
-  ()=>`Yoshi the dog had discovered that if he sat close enough to Elise while she was cooking, small things occasionally fell in his direction.`,
-  ()=>`Luna was teaching Gunner how to identify constellations, and he was a surprisingly good student when he stopped pretending not to be interested.`,
-  ()=>`Daisy the cat had chosen Elise as her person on the first day and had not revised that decision in three years.`,
-  ()=>`Gunner took Yoshi on a run every morning and came back looking like he had been the one chasing the squirrels.`,
-  ()=>`Elise made waffles on Saturday mornings and always made extra because Gunner and Luna had a talent for showing up exactly then.`,
-  ()=>`Luna found Daisy sleeping in the laundry basket and photographed her from four different angles before mentioning it to anyone else.`,
-  ()=>`Yoshi and Daisy had reached a quiet understanding about the couch, which was that Yoshi got one cushion and Daisy got the rest.`,
-  ()=>`Gunner threw the ball until his arm was tired and Yoshi still looked at him with absolute confidence that there would be more.`,
-  ()=>`Elise sat on the porch reading while Daisy watched birds from the railing and Yoshi dozed in a warm patch of afternoon sun.`,
-  ()=>`Luna spent an entire afternoon teaching Yoshi a new trick and declared it a success even though he only performed it reliably for treats.`,
-  ()=>`Gunner and Luna spent the whole car ride arguing about which playlist to play while Yoshi hung his head out the back window unbothered.`,
-  ()=>`Elise found Daisy sitting in the middle of her open laptop and did not have the heart to move her for a full fifteen minutes.`,
-  ()=>`Yoshi greeted Gunner at the door every single day as though Gunner had been away for years rather than a single afternoon at school.`,
-  ()=>`Luna baked lemon bars and left half of them on Elise's doorstep with a note that said nothing except a small hand-drawn sun.`,
-  ()=>`Daisy had strong opinions about where everyone should sit and made them known through slow and deliberate placement of herself on the preferred spots.`,
-  ()=>`Gunner fixed Elise's bike tire without being asked and was deeply embarrassed when she thanked him in front of Luna.`,
-  ()=>`Elise, Gunner, and Luna ended up sitting on the kitchen floor because Yoshi had taken the couch and nobody wanted to disturb him.`,
-  ()=>`Luna kept a running list of Daisy's best moments and had filled three pages in her journal without including a single repeated entry.`,
-  ()=>`Gunner made hot chocolate badly but enthusiastically, and Elise and Luna drank every cup he made without saying a word about the lumps.`,
-  // ── Rare-letter / uncommon words ──
-  ()=>`The fjord carved a path through basalt cliffs that gave the valley its distinctive and jagged silhouette.`,
-  ()=>`Zephyrs moved through the wheat field in visible waves, a phenomenon the locals called the breathing of the plain.`,
-  ()=>`The quartz vein zigzagged through the granite face and caught the low sun in a way that made the whole cliff seem to glow.`,
-  ()=>`Vexed by the lack of a quorum, the chairman adjourned the meeting and nobody objected with any particular vehemence.`,
-  ()=>`The taxidermist displayed a quetzal alongside a waxwing, and both birds looked improbably vivid under the shop's fluorescent lighting.`,
-  ()=>`Oxbow lakes form when a river meanders so sharply that the bend eventually gets cut off and left behind as a crescent of still water.`,
-  ()=>`The xylophonist warmed up backstage with a sequence of jazz scales that drifted into the lobby and silenced the pre-show chatter.`,
-  ()=>`Quixotic ambitions aside, she had actually built the prototype in a week using nothing more than salvaged components and a stubborn optimism.`,
-  ()=>`The fjord kayakers watched a kittiwake dive from sixty feet and surface with a fish before any of them had finished adjusting their spray skirts.`,
-  ()=>`Pyxis, Vela, and Puppis are the three constellations formed when the ancient constellation Argo Navis was subdivided in the eighteenth century.`,
-  ()=>`A coxswain called the rhythm while eight rowers moved in exact synchrony, the blades kissing the water and lifting free without a single clatter.`,
-  ()=>`The wyvern on the inn's sign had been repainted so many times that it now looked more like a cheerful lizard than a heraldic beast.`,
-  ()=>`Juxaposing the baroque organ piece with a minimalist electronic drone created a dissonance that was, somehow, exactly right for the space.`,
-  ()=>`The quayside cobblestones were slick with rain, and the hawsers groaned as the ferry nudged the pilings and settled into its berth.`,
-  ()=>`Bioluminescent phytoplankton lit the wave crests blue-green as the kayak moved through the dark, each paddle stroke igniting a brief cold fire.`,
-  ()=>`She had an uncanny knack for finding the exact crux of an argument and expressing it in a single unambiguous declarative sentence.`,
-  ()=>`The sphinx moth hovered motionless over the flower, its proboscis working with a precision that made it look like a conjuring trick.`,
-  ()=>`Exquisite marquetry covered the cabinet's surface, every sliver of exotic veneer fitted so tightly that a fingernail found no gap to enter.`,
-  ()=>`The beekeeper wore no gloves and moved through the buzzing frames with a practiced calm that communicated itself, somehow, to the bees.`,
-  ()=>`Scherzando is the marking that tells a performer to play playfully, a direction that is much harder to follow than it initially appears.`,
-  ()=>`The glaciologist used a hollow drill to extract an ice core and recovered air bubbles trapped eight hundred thousand years ago.`,
-  ()=>`Vellichor is the strange wistfulness of used bookstores, and she had felt it every time she entered one since the age of twelve.`,
-  ()=>`The zymurgist adjusted the fermentation temperature by half a degree and noted the change with the satisfaction of someone who trusted small interventions.`,
-  ()=>`Quilling is the art of rolling thin strips of paper into coils and arranging them into patterns, and she had done it for forty years.`,
-  ()=>`The mizzenmast creaked as the vessel came about, and the helmsman corrected with the small automatic adjustment of someone who had done it ten thousand times.`,
-  ()=>`Juniper berries, wax myrtle, and sweetfern grew so thickly along the path that simply walking through them released a wave of sharp, clean scent.`,
-  ()=>`The knapped flint had a conchoidal fracture pattern that the archaeologist recognized immediately as intentional, the work of practiced hands many centuries past.`,
-  ()=>`Epoxy and bronze powder turned the repaired crack into a visible seam, a technique she preferred to hiding damage under perfect paint.`,
+  ()=>`The signal had traveled for nine thousand years before anyone was listening. It arrived on a Tuesday, in the form of a repeating prime sequence embedded in the static of a routine radio survey. The team that found it called in sick the next day, one by one, each needing time to believe it was real.`,
+  ()=>`Steel Vengeance is unlike any coaster in the world. It was built on the bones of Mean Streak, a wooden coaster that stood for nearly three decades before Rocky Mountain Construction arrived and transformed it into something that had never existed before. The first riders felt like they were riding something alive.`,
+  ()=>`She had been writing code for twenty years when the compiler told her something she did not expect. The error message referenced a function she had written in 2009 for a project that was deprecated three years later. It was still running. Still being called. Still mattering.`,
+  ()=>`The quantum computer solved the problem in eleven milliseconds. The classical supercomputer, running in parallel as a control, was still working on it seventeen days later. The problem itself had been proven unsolvable. Except it was not. Not anymore.`,
+  ()=>`Maverick opened in 2007 and immediately became the most aggressive coaster in the park. It launched riders twice, inverted them through a heartline roll, and squeezed them through a ravine so tight the track seemed like it could not possibly fit anything larger than a bicycle. People came back for more.`,
 ];
 
-const CODE=[
-  // JavaScript / TypeScript
-  `function fibonacci(n) {\n  if (n <= 1) return n;\n  return fibonacci(n - 1) + fibonacci(n - 2);\n}`,
-  `const fetchUser = async (id) => {\n  const res = await fetch('/api/users/' + id);\n  return res.json();\n};`,
-  `for (let i = 0; i < arr.length; i++) {\n  if (arr[i] % 2 === 0) result.push(arr[i]);\n}`,
-  `const sorted = items.sort((a, b) => a.name.localeCompare(b.name));`,
-  `class EventEmitter {\n  constructor() { this.events = {}; }\n  on(evt, fn) { (this.events[evt] ||= []).push(fn); }\n}`,
-  `const debounce = (fn, ms) => {\n  let timer;\n  return (...args) => {\n    clearTimeout(timer);\n    timer = setTimeout(() => fn(...args), ms);\n  };\n};`,
-  `import { useState, useEffect, useCallback } from 'react';`,
-  `const memoize = (fn) => {\n  const cache = new Map();\n  return (...args) => {\n    const key = JSON.stringify(args);\n    if (cache.has(key)) return cache.get(key);\n    const result = fn(...args);\n    cache.set(key, result);\n    return result;\n  };\n};`,
-  `const pipeline = compose(validateInput, sanitize, transform, save);`,
-  `const throttle = (fn, limit) => {\n  let inThrottle;\n  return function(...args) {\n    if (!inThrottle) {\n      fn.apply(this, args);\n      inThrottle = true;\n      setTimeout(() => inThrottle = false, limit);\n    }\n  };\n};`,
-  `export const useLocalStorage = (key, initial) => {\n  const [val, setVal] = useState(() => {\n    try { return JSON.parse(localStorage.getItem(key)) ?? initial; }\n    catch { return initial; }\n  });\n  useEffect(() => localStorage.setItem(key, JSON.stringify(val)), [key, val]);\n  return [val, setVal];\n};`,
-  `const deepClone = (obj) => JSON.parse(JSON.stringify(obj));`,
-  `Promise.all([fetchUsers(), fetchOrders(), fetchProducts()])\n  .then(([users, orders, products]) => ({ users, orders, products }))\n  .catch(err => console.error('Fetch failed:', err));`,
-  `const chunk = (arr, size) =>\n  Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>\n    arr.slice(i * size, i * size + size));`,
-  `type Result<T, E = Error> = { ok: true; value: T } | { ok: false; error: E };`,
-  `const flatten = (arr) => arr.reduce((acc, val) =>\n  Array.isArray(val) ? acc.concat(flatten(val)) : acc.concat(val), []);`,
-  `Object.entries(config)\n  .filter(([, v]) => v !== null && v !== undefined)\n  .forEach(([k, v]) => process.env[k.toUpperCase()] = String(v));`,
-  `const retry = async (fn, attempts = 3, delay = 1000) => {\n  for (let i = 0; i < attempts; i++) {\n    try { return await fn(); }\n    catch (e) { if (i === attempts - 1) throw e; await sleep(delay); }\n  }\n};`,
-  `const groupBy = (arr, key) =>\n  arr.reduce((acc, item) => {\n    (acc[item[key]] ||= []).push(item);\n    return acc;\n  }, {});`,
-  `interface ApiResponse<T> {\n  data: T;\n  status: number;\n  message: string;\n  timestamp: Date;\n}`,
-  // Python
-  `def quicksort(arr):\n  if len(arr) <= 1:\n    return arr\n  pivot = arr[len(arr) // 2]\n  left = [x for x in arr if x < pivot]\n  right = [x for x in arr if x > pivot]\n  return quicksort(left) + [pivot] + quicksort(right)`,
-  `@app.route('/health', methods=['GET'])\ndef health_check():\n  return jsonify({'status': 'ok', 'version': '1.4.0'})`,
-  `with open('data.json', 'r') as f:\n  config = json.load(f)\n\nresult = {k: v for k, v in config.items() if v is not None}`,
-  `class DataPipeline:\n  def __init__(self, steps):\n    self.steps = steps\n  def run(self, data):\n    return reduce(lambda d, fn: fn(d), self.steps, data)`,
-  `@dataclass\nclass Point:\n  x: float\n  y: float\n  def distance(self, other: 'Point') -> float:\n    return ((self.x - other.x)**2 + (self.y - other.y)**2) ** 0.5`,
-  `async def fetch_all(urls: list[str]) -> list[dict]:\n  async with aiohttp.ClientSession() as session:\n    return await asyncio.gather(*[fetch(session, url) for url in urls])`,
-  `df = pd.read_csv('sales.csv', parse_dates=['date'])\nmonthly = df.groupby(df['date'].dt.to_period('M'))['revenue'].sum()`,
-  `from functools import lru_cache\n\n@lru_cache(maxsize=None)\ndef fib(n: int) -> int:\n  return n if n < 2 else fib(n-1) + fib(n-2)`,
-  `squares = {x: x**2 for x in range(1, 11) if x % 2 != 0}`,
-  `def flatten(nested, depth=1):\n  for item in nested:\n    if isinstance(item, list) and depth > 0:\n      yield from flatten(item, depth - 1)\n    else:\n      yield item`,
-  // SQL
-  `SELECT u.name, COUNT(o.id) AS total_orders\nFROM users u\nLEFT JOIN orders o ON o.user_id = u.id\nGROUP BY u.id\nHAVING COUNT(o.id) > 5\nORDER BY total_orders DESC;`,
-  `SELECT * FROM events\nWHERE created_at > NOW() - INTERVAL '7 days'\n  AND status = 'active'\nORDER BY created_at DESC;`,
-  `WITH ranked AS (\n  SELECT *, ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY created_at DESC) AS rn\n  FROM sessions\n)\nSELECT * FROM ranked WHERE rn = 1;`,
-  `UPDATE products\nSET price = price * 1.05,\n    updated_at = NOW()\nWHERE category = 'electronics' AND stock > 0;`,
-  `CREATE INDEX CONCURRENTLY idx_orders_user_date\n  ON orders (user_id, created_at DESC)\n  WHERE status != 'cancelled';`,
-  // Shell / CLI
-  `git commit -m "fix: resolve race condition in session token handler"`,
-  `docker run -d -p 3000:3000 --env-file .env --name myapp myapp:latest`,
-  `npm install --save-dev typescript @types/node ts-node eslint prettier`,
-  `curl -X POST https://api.example.com/v1/tokens \\\n  -H "Authorization: Bearer $TOKEN" \\\n  -H "Content-Type: application/json" \\\n  -d '{"scope": "read:all"}'`,
-  `rsync -avz --progress --delete ./dist/ user@server:/var/www/html/`,
-  `helm upgrade --install myapp ./chart -f values.prod.yaml --namespace production`,
-  `ssh -i ~/.ssh/id_rsa user@192.168.1.100 -p 2222`,
-  `grep -rn "TODO\\|FIXME\\|HACK" ./src --include="*.ts" | sort | uniq -c | sort -rn`,
-  `jq '.users[] | select(.active == true) | {id, name, email}' users.json`,
-  `find . -name "*.log" -mtime +30 -exec rm -f {} \\; && echo "Cleanup complete"`,
-  `aws s3 sync ./build s3://my-bucket/prod --delete --cache-control "max-age=31536000"`,
-  `kubectl rollout restart deployment/api-server -n production`,
-  `git log --oneline --graph --all --decorate | head -20`,
-  `tar -czf backup-$(date +%Y%m%d).tar.gz ./data && aws s3 cp backup-*.tar.gz s3://backups/`,
-  // Rust / Go
-  `fn binary_search<T: Ord>(arr: &[T], target: &T) -> Option<usize> {\n  let (mut lo, mut hi) = (0, arr.len());\n  while lo < hi {\n    let mid = lo + (hi - lo) / 2;\n    match arr[mid].cmp(target) {\n      Ordering::Equal => return Some(mid),\n      Ordering::Less => lo = mid + 1,\n      Ordering::Greater => hi = mid,\n    }\n  }\n  None\n}`,
-  `func worker(jobs <-chan int, results chan<- int, wg *sync.WaitGroup) {\n  defer wg.Done()\n  for j := range jobs {\n    results <- process(j)\n  }\n}`,
-  // CSS / HTML
-  `<div class="container" id="main" data-value="42" aria-label="content"></div>`,
-  `.card {\n  display: grid;\n  grid-template-columns: 1fr 2fr;\n  gap: 1rem;\n  padding: clamp(1rem, 2vw, 2rem);\n  border-radius: 0.5rem;\n  box-shadow: 0 4px 24px rgba(0,0,0,.12);\n}`,
-  `@keyframes fadeIn {\n  from { opacity: 0; transform: translateY(8px); }\n  to   { opacity: 1; transform: translateY(0); }\n}`,
-  // More JavaScript / TypeScript
-  `const zip = <T, U>(a: T[], b: U[]): [T, U][] =>\n  a.map((v, i) => [v, b[i]]);`,
-  `const once = (fn: Function) => {\n  let called = false, result: any;\n  return (...args: any[]) => {\n    if (!called) { called = true; result = fn(...args); }\n    return result;\n  };\n};`,
-  `export async function* paginate<T>(fetch: (page: number) => Promise<T[]>) {\n  let page = 0, batch: T[];\n  do { batch = await fetch(page++); yield* batch; } while (batch.length);\n}`,
-  `const EventBus = new (class {\n  #handlers = new Map<string, Set<Function>>();\n  on(e: string, fn: Function) { (this.#handlers.get(e) ?? this.#handlers.set(e, new Set()).get(e)!).add(fn); }\n  emit(e: string, ...args: any[]) { this.#handlers.get(e)?.forEach(fn => fn(...args)); }\n})();`,
-  `const trie = (words: string[]) => words.reduce((root, word) =>\n  ([...word].reduce((node, ch) => (node[ch] ??= {}), root), root), {} as any);`,
-  `const lru = (cap: number) => {\n  const cache = new Map<any, any>();\n  return { get: (k: any) => { const v = cache.get(k); if (v !== undefined) { cache.delete(k); cache.set(k, v); } return v; },\n           set: (k: any, v: any) => { cache.delete(k); cache.set(k, v); if (cache.size > cap) cache.delete(cache.keys().next().value); } };\n};`,
-  `const isDeepEqual = (a: unknown, b: unknown): boolean =>\n  a === b ? true\n  : Array.isArray(a) && Array.isArray(b) && a.length === b.length\n    ? a.every((v, i) => isDeepEqual(v, b[i]))\n  : a instanceof Object && b instanceof Object\n    ? Object.keys(a as object).length === Object.keys(b as object).length &&\n      Object.entries(a as object).every(([k, v]) => isDeepEqual(v, (b as any)[k]))\n  : false;`,
-  `async function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {\n  const timeout = new Promise<never>((_, reject) =>\n    setTimeout(() => reject(new Error(\`Timeout after \${ms}ms\`)), ms));\n  return Promise.race([promise, timeout]);\n}`,
-  // More Python
-  `from contextlib import contextmanager\n\n@contextmanager\ndef timer(label: str = ""):\n  import time\n  start = time.perf_counter()\n  try: yield\n  finally: print(f"{label}: {time.perf_counter() - start:.4f}s")`,
-  `class Singleton(type):\n  _instances: dict = {}\n  def __call__(cls, *args, **kwargs):\n    if cls not in cls._instances:\n      cls._instances[cls] = super().__call__(*args, **kwargs)\n    return cls._instances[cls]`,
-  `def sliding_window(seq, n):\n  from collections import deque\n  window = deque(maxlen=n)\n  for item in seq:\n    window.append(item)\n    if len(window) == n:\n      yield tuple(window)`,
-  `import heapq\n\ndef dijkstra(graph: dict, src: str) -> dict:\n  dist = {src: 0}\n  pq = [(0, src)]\n  while pq:\n    d, u = heapq.heappop(pq)\n    if d > dist.get(u, float('inf')): continue\n    for v, w in graph.get(u, []):\n      if (nd := d + w) < dist.get(v, float('inf')):\n        dist[v] = nd; heapq.heappush(pq, (nd, v))\n  return dist`,
-  `VALID_STATES = frozenset({"pending", "active", "paused", "cancelled", "complete"})\n\ndef transition(current: str, next_: str, allowed: dict[str, set[str]]) -> str:\n  if next_ not in allowed.get(current, set()):\n    raise ValueError(f"Cannot transition {current!r} -> {next_!r}")\n  return next_`,
-  // More SQL
-  `SELECT\n  date_trunc('week', created_at) AS week,\n  SUM(amount) FILTER (WHERE type = 'credit') AS credits,\n  SUM(amount) FILTER (WHERE type = 'debit')  AS debits\nFROM transactions\nGROUP BY 1 ORDER BY 1 DESC;`,
-  `ALTER TABLE orders\n  ADD COLUMN IF NOT EXISTS metadata jsonb NOT NULL DEFAULT '{}',\n  ADD COLUMN IF NOT EXISTS deleted_at timestamptz,\n  ADD CONSTRAINT chk_amount CHECK (amount > 0);`,
-  `SELECT p.id, p.name,\n  COALESCE(json_agg(t.name ORDER BY t.name) FILTER (WHERE t.id IS NOT NULL), '[]') AS tags\nFROM products p\nLEFT JOIN product_tags pt ON pt.product_id = p.id\nLEFT JOIN tags t ON t.id = pt.tag_id\nGROUP BY p.id;`,
-  // More Shell / CLI / DevOps
-  `npx tsx watch src/index.ts --require tsconfig-paths/register`,
-  `openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 365 -nodes`,
-  `docker compose --profile prod up -d --build --remove-orphans 2>&1 | tee deploy.log`,
-  `gh workflow run deploy.yml --ref main --field environment=production --field version=$(git describe --tags)`,
-  `awk 'NR==FNR{a[$1]=$0;next} ($1 in a){print a[$1], $0}' file1.txt file2.txt`,
-  `gcloud run deploy api --image gcr.io/$PROJECT/api:$SHA --region us-central1 --platform managed --allow-unauthenticated`,
-  `ffmpeg -i input.mp4 -vf "scale=-2:720,fps=30" -c:v libx264 -preset slow -crf 22 -c:a aac -b:a 128k output.mp4`,
-  // Rust
-  `use std::collections::HashMap;\n\nfn word_count(s: &str) -> HashMap<&str, usize> {\n  s.split_whitespace()\n   .fold(HashMap::new(), |mut m, w| { *m.entry(w).or_insert(0) += 1; m })\n}`,
-  `#[derive(Debug, Clone)]\nstruct Matrix<T> { rows: usize, cols: usize, data: Vec<T> }\n\nimpl<T: Default + Clone> Matrix<T> {\n  fn new(rows: usize, cols: usize) -> Self {\n    Self { rows, cols, data: vec![T::default(); rows * cols] }\n  }\n}`,
-  // More CSS
-  `:root { --clr-bg: #0e0f14; --clr-accent: #4fc4cf; --radius: 0.5rem; }\n\n.card { background: color-mix(in srgb, var(--clr-accent) 8%, transparent); border: 1px solid color-mix(in srgb, var(--clr-accent) 25%, transparent); border-radius: var(--radius); }`,
-  `@layer utilities {\n  .flow > * + * { margin-block-start: var(--flow-space, 1em); }\n  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }\n}`,
-  // React / JSX
-  `const useAsync = <T>(fn: () => Promise<T>, deps: any[]) => {\n  const [state, set] = useState<{ data?: T; error?: Error; loading: boolean }>({ loading: false });\n  useEffect(() => { set({ loading: true }); fn().then(data => set({ data, loading: false })).catch(error => set({ error, loading: false })); }, deps);\n  return state;\n};`,
-];
-
-const NUMS=[
-  ()=>`${ri(1000,9999)} ${ri(1000,9999)} ${ri(1000,9999)} ${ri(1000,9999)}`,
-  ()=>`${(Math.random()*1000).toFixed(2)} + ${(Math.random()*500).toFixed(2)} = ${(Math.random()*1500).toFixed(2)}`,
-  ()=>`IP: ${[1,2,3,4].map(()=>ri(1,254)).join('.')}`,
-  ()=>`${ri(10,99)}% of ${ri(1000,9999)} equals approximately ${ri(100,9000)}.`,
-  ()=>`Serial: ${Array.from({length:8},()=>'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'[ri(0,35)]).join('')}`,
-  ()=>`Phone: (${ri(200,999)}) ${ri(200,999)}-${ri(1000,9999)}`,
-  ()=>`${ri(10,999)} items at $${(Math.random()*50+1).toFixed(2)} each, totaling $${(Math.random()*5000+100).toFixed(2)}.`,
-  ()=>`Coordinates: ${(Math.random()*180-90).toFixed(4)}, ${(Math.random()*360-180).toFixed(4)}`,
-  ()=>`Invoice #${ri(10000,99999)}: ${ri(1,50)} units x $${(Math.random()*200+10).toFixed(2)} = $${(Math.random()*5000+100).toFixed(2)}`,
-  ()=>`v${ri(1,9)}.${ri(0,19)}.${ri(0,99)} released on ${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][ri(0,11)]} ${ri(1,28)}, 20${ri(18,25)}`,
-  ()=>`${ri(1,12)}/${ri(1,28)}/${ri(2000,2025)}  —  ${ri(0,23).toString().padStart(2,'0')}:${ri(0,59).toString().padStart(2,'0')}:${ri(0,59).toString().padStart(2,'0')}`,
-  ()=>`Port: ${ri(1024,65535)}  PID: ${ri(1000,99999)}  Memory: ${ri(64,8192)} MB`,
-  ()=>`${ri(1,255)}.${ri(0,255)}.${ri(0,255)}.${ri(0,255)}/${ri(16,30)}`,
-  ()=>`Lat: ${(Math.random()*90).toFixed(6)}N  Lon: ${(Math.random()*180).toFixed(6)}W  Alt: ${ri(0,8848)}m`,
-  ()=>`${ri(100,999)}-${ri(10,99)}-${ri(1000,9999)}  EXP: ${ri(1,12).toString().padStart(2,'0')}/${ri(24,32)}  CVV: ${ri(100,999)}`,
-  ()=>`Batch ${ri(1,999).toString().padStart(4,'0')}: ${ri(100,50000)} records processed in ${(Math.random()*60+0.1).toFixed(3)}s`,
-  ()=>`${ri(2,128)} cores @ ${(Math.random()*3+1.5).toFixed(2)} GHz  —  ${ri(4,512)} GB RAM  —  ${ri(256,32768)} GB NVMe`,
-  ()=>`SHA-256: ${Array.from({length:16},()=>ri(0,255).toString(16).padStart(2,'0')).join('')}`,
-  ()=>`${ri(1000,9999)} + ${ri(100,999)} - ${ri(10,99)} * ${ri(2,9)} = ${ri(1000,9999)}`,
-  ()=>`Order #${ri(100000,999999)}  Status: ${['PENDING','SHIPPED','DELIVERED','RETURNED'][ri(0,3)]}  ETA: ${ri(1,14)} days`,
-  ()=>`${(Math.random()*100).toFixed(4)}% uptime over ${ri(30,365)} days — ${ri(0,8)}h ${ri(0,59)}m downtime`,
-  ()=>`Ticket #${ri(10000,99999)}: Priority ${ri(1,5)}  —  Opened ${ri(1,24)}h ago  —  ${ri(0,8)} comments`,
-  ()=>`$${(Math.random()*50000+1000).toFixed(2)} USD at ${(Math.random()*5+1).toFixed(4)} EUR/USD = €${(Math.random()*45000+900).toFixed(2)}`,
-  ()=>`${ri(0,359)}.${ri(0,9)}° bearing  ${ri(1,999)} ${['m','km','nm','ft','mi'][ri(0,4)]} range`,
-  ()=>`UUID: ${[8,4,4,4,12].map(n=>Array.from({length:n},()=>ri(0,15).toString(16)).join('')).join('-')}`,
-  ()=>`${ri(1,12)}h ${ri(0,59)}m ${ri(0,59)}s elapsed  |  ETA: ${ri(0,23)}h ${ri(0,59)}m remaining`,
-  ()=>`CIDR: ${ri(10,192)}.${ri(0,255)}.${ri(0,255)}.0/${ri(20,30)}  GW: ${ri(10,192)}.${ri(0,255)}.${ri(0,255)}.1`,
-  ()=>`Run #${ri(100,999)}: ${(Math.random()*30+10).toFixed(2)}s  avg ${(Math.random()*20+8).toFixed(2)}s  best ${(Math.random()*15+6).toFixed(2)}s`,
-  ()=>`${ri(1,6)}.${ri(0,9)} magnitude event  depth ${ri(2,700)} km  ${(Math.random()*90).toFixed(2)}°N ${(Math.random()*180).toFixed(2)}°W`,
-  ()=>`BUILD_NUMBER=${ri(1000,9999)}  COMMIT=${Array.from({length:7},()=>ri(0,15).toString(16)).join('')}  BRANCH=main`,
-  ()=>`${ri(100,999)} req/s  p50=${ri(3,40)}ms  p95=${ri(30,200)}ms  p99=${ri(100,500)}ms  err=${(Math.random()*2).toFixed(3)}%`,
-  ()=>`Epoch ${ri(10,300)}/${ri(300,500)}  loss: ${(Math.random()*.5+.01).toFixed(6)}  val_loss: ${(Math.random()*.6+.015).toFixed(6)}  acc: ${(0.7+Math.random()*.29).toFixed(4)}`,
-  ()=>`${Array.from({length:4},()=>ri(0,255).toString(16).padStart(2,'0').toUpperCase()).join(':')}:${Array.from({length:2},()=>ri(0,255).toString(16).padStart(2,'0').toUpperCase()).join(':')}`,
-  ()=>`T+${ri(0,9)}:${ri(0,59).toString().padStart(2,'0')}:${ri(0,59).toString().padStart(2,'0')}  alt ${ri(50,400)} km  vel ${ri(7000,28000)} m/s  inc ${(Math.random()*98).toFixed(2)}°`,
-  ()=>`${ri(1,52)} weeks × ${ri(3,7)} days × ${ri(1,3)} sessions = ${ri(50,1100)} total sessions`,
-  ()=>`hex: #${Array.from({length:3},()=>ri(0,255).toString(16).padStart(2,'0')).join('')}  rgb(${ri(0,255)}, ${ri(0,255)}, ${ri(0,255)})  hsl(${ri(0,359)}, ${ri(20,100)}%, ${ri(20,80)}%)`,
-  ()=>`${(Math.random()*9.9+0.1).toFixed(2)}e+${ri(2,12)}  ×  ${(Math.random()*9.9+0.1).toFixed(2)}e-${ri(1,8)}  =  ${(Math.random()*9.9+0.1).toFixed(4)}e+${ri(1,10)}`,
-];
-
-const SYMS=[
-  `!@#$%^&*()_+-=[]{}|;':,./<>?`,
-  `function add(a, b) { return a + b; } // returns the sum`,
-  `const url = "https://example.com/path?key=value&other=123";`,
-  `if (x >= 10 && y <= 20 || z !== null) { doSomething(); }`,
-  `/* TODO: fix this edge case when input === undefined or null */`,
-  `user@domain.co.uk | P@ssw0rd!123 | token: a1b2-c3d4-e5f6`,
-  `{ "name": "Alice", "age": 30, "active": true, "score": 98.5 }`,
-  `<div class="container" id="main" data-value="42" aria-label="content"></div>`,
-  `grep -rn "TODO" ./src --include="*.ts" | sort | uniq -c`,
-  `ssh -i ~/.ssh/id_rsa user@192.168.1.100 -p 2222`,
-  `~/.config/nvim/init.lua:42: error: 'opts' (a nil value)`,
-  `for (let i = 0; i <= arr.length - 1; i++) { sum += arr[i]; }`,
-  `export default function* range(start = 0, end, step = 1) {}`,
-  `https://api.service.io/v2/search?q=hello+world&limit=25&offset=0`,
-  `const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;`,
-  `if (!user?.roles?.includes('admin')) throw new Error('Forbidden: 403');`,
-  `pkg install --global @scope/tool@^2.1.0 && tool --version`,
-  `[[ -f "$HOME/.bashrc" ]] && source "$HOME/.bashrc" || echo "not found"`,
-  `SELECT * FROM t WHERE col LIKE '%foo%' AND (x BETWEEN 1 AND 99);`,
-  `margin: 0 auto; padding: 1.5rem 2rem; border: 1px solid #e2e8f0;`,
-  `console.assert(result === expected, \`Expected \${expected}, got \${result}\`);`,
-  `(lambda x, y: x**2 + 2*x*y - y**2)(3, -4)  # => -7`,
-  `{"Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ1c2VyIn0"}`,
-  `<meta charset="UTF-8" /><meta name="viewport" content="width=device-width" />`,
-  `git log --pretty=format:"%h %ad | %s%d [%an]" --date=short | head -10`,
-  `REACT_APP_API_URL=https://api.example.com npm run build -- --profile`,
-  `*:focus-visible { outline: 2px solid #4fc4cf; outline-offset: 3px; }`,
-  `throw new TypeError(\`Expected string, got \${typeof value}: \${String(value)}\`);`,
-  `\`Hello, \${name}!\` === "Hello, " + name + "!" // both produce the same string`,
-  `[1,2,3].reduce((acc, x) => ({ ...acc, [x]: x * x }), {}) // {1:1, 2:4, 3:9}`,
-  `type NonNullable<T> = T extends null | undefined ? never : T;`,
-  `const guard = (x: unknown): x is string => typeof x === 'string' && x.length > 0;`,
-  `obj?.deeply?.nested?.value ?? 'fallback'  // optional chaining + nullish coalescing`,
-  `[...new Set([1, 2, 2, 3, 3, 3])].filter(x => x % 2 !== 0)  // [1, 3]`,
-  `\`\${String.fromCodePoint(0x1F680)}\` // 🚀  — emoji via Unicode code point`,
-  `const clamp = (val: number, min: number, max: number) => Math.min(Math.max(val, min), max);`,
-  `{'Content-Type': 'application/json; charset=UTF-8', 'X-Request-Id': crypto.randomUUID()}`,
-  `(async () => { const [a, b] = await Promise.all([fetchA(), fetchB()]); return a + b; })();`,
-  `path.resolve(__dirname, '..', 'dist', 'index.js')  // ../dist/index.js`,
-  `Object.fromEntries(Object.entries(obj).map(([k, v]) => [k.toLowerCase(), v.trim()]));`,
-  `sed -i 's/foo/bar/g; /^#/d; s/[[:space:]]*$//' config.txt && echo "done"`,
-  `PGPASSWORD="$DB_PASS" psql -h localhost -U admin -d mydb -c "\\COPY t FROM 'data.csv' CSV HEADER;"`,
-  `docker inspect --format='{{.NetworkSettings.IPAddress}}' $(docker ps -q --filter name=api)`,
-  `while IFS=',' read -r id name score; do [[ $score -gt 90 ]] && echo "$id: $name"; done < results.csv`,
-  `import { z } from 'zod';\nconst Schema = z.object({ id: z.string().uuid(), age: z.number().int().min(0).max(150) });`,
-  `<template #header="{ title, count }"><h2>{{ title }} <sup>({{ count }})</sup></h2></template>`,
-  `@media (prefers-color-scheme: dark) and (min-width: 768px) { :root { --bg: #0e0f14; } }`,
-  `SELECT jsonb_path_query_array(data, '$.items[*] ? (@.price > 50)') FROM orders WHERE id = $1;`,
-  `EXPLAIN (ANALYZE, BUFFERS, FORMAT TEXT) SELECT * FROM events WHERE user_id = $1 AND ts > now() - '1 day'::interval;`,
-];
-
-// ── PROBLEM KEYS: build a weighted key list and generate targeted prompts ──
-// Returns { prompt, targetKeys } where targetKeys is array of keys being drilled
-function getProblemKeysPrompt(){
-  // Score each key: error_rate × sqrt(total_attempts+1) so unused keys also get surfaced
-  const scored=[];
-  const allKeys='abcdefghijklmnopqrstuvwxyz0123456789`-=[]\\;\',./'.split('');
-  allKeys.forEach(k=>{
-    const e=keyErrors[k]||0;
-    const c=keyCorrect[k]||0;
-    const tot=e+c;
-    // error rate weighted by usage — unused keys get a small base score to surface them
-    const errRate=tot>0?e/tot:0;
-    const unusedBonus=tot===0?0.12:tot<5?0.07:0;
-    const score=errRate*Math.sqrt(tot+1)+unusedBonus;
-    if(score>0) scored.push({k,e,c,tot,errRate,score});
-  });
-
-  // If no error data at all, fall back to sentences
-  if(scored.length===0) return {prompt:getPrompt('sentences'),targetKeys:[]};
-
-  // Sort by score descending
-  scored.sort((a,b)=>b.score-a.score);
-
-  // Pick top problem keys (up to 6), heavily weighted toward top 3
-  // Red keys (>20% error rate) always included first
-  const redKeys=scored.filter(x=>x.errRate>0.20).slice(0,4).map(x=>x.k);
-  const orangeKeys=scored.filter(x=>x.errRate>0.05&&x.errRate<=0.20).slice(0,2).map(x=>x.k);
-  // Unused/underused keys get a slot too
-  const unusedKeys=scored.filter(x=>x.tot<5&&x.tot>0).slice(0,2).map(x=>x.k);
-
-  let targetKeys=[...new Set([...redKeys,...orangeKeys,...unusedKeys])].slice(0,6);
-
-  // If still nothing (all green or no data), take top 4 by score anyway
-  if(targetKeys.length===0) targetKeys=scored.slice(0,4).map(x=>x.k);
-
-  // Build weighted letter pool for prompt generation
-  // Each target key gets weight proportional to its score; other letters get weight 1
-  const weightMap={};
-  allKeys.forEach(k=>weightMap[k]=1);
-  scored.forEach(({k,score,errRate})=>{
-    // Red keys: weight 12-20, orange: 5-8, others by score
-    if(errRate>0.20) weightMap[k]=Math.round(12+score*4);
-    else if(errRate>0.05) weightMap[k]=Math.round(5+score*3);
-    else weightMap[k]=Math.max(1,Math.round(1+score*2));
-  });
-
-  // Generate a prompt: mix of word-based drilling and real sentences seeded with problem chars
-  const strategy=Math.random();
-  if(strategy<0.35){
-    return {prompt:buildDrillWords(targetKeys,weightMap),targetKeys};
-  } else if(strategy<0.65){
-    return {prompt:buildSeededSentence(targetKeys),targetKeys};
-  } else {
-    return {prompt:buildWeightedRandom(targetKeys,weightMap),targetKeys};
-  }
-}
-
-// Strategy 1: drill words — short real English words that contain the problem keys
-const DRILL_WORDS={
-  a:['allay','attic','alpha','amaze','atlas','adapt','alarm','award','array','await','abate','afar','assay'],
-  b:['babble','bubble','blurb','brisk','brush','burnt','blast','blank','blend','bloom','bulky','bunch','burns','brunt'],
-  c:['catch','clock','crisp','crack','cubic','cycle','curly','chunk','check','chimp','civic','couch','crimp','cluck'],
-  d:['dodge','dread','dried','droop','drunk','dread','daddy','dizzy','dodge','delta','druid','dusky','dunce','dolly'],
-  e:['every','ember','eerie','erode','evoke','early','elbow','eager','exact','extra','elect','erect','emote','envy'],
-  f:['fluff','funny','fuzzy','flack','flask','flesh','fling','flock','flown','flunk','foray','forge','frank','fringe'],
-  g:['grasp','gruff','graze','grill','groan','growl','gully','guise','grime','greet','graft','gloom','gloss','ghoul'],
-  h:['harsh','hedge','hitch','hydra','hoard','hoist','handy','hatch','haunt','heist','henna','hippo','hurry','hutch'],
-  i:['infix','irony','itchy','ivory','inlay','impel','inept','imply','ingot','ionic','irked','issue','intel','india'],
-  j:['jumpy','jazzy','jiffy','jolly','joust','jaded','jaunt','joist','jetty','jenny','junky','juicy','jelly','jazzy'],
-  k:['knack','kneel','knell','kinky','kooky','kudos','kayak','keyed','kinky','knotty','kiosk','krill','kazoo'],
-  l:['lofty','lucky','lyric','latch','latch','llama','lobby','lunar','lusty','lurch','lyric','local','ladle','lance'],
-  m:['mummy','messy','muddy','minty','micro','mirth','moody','mogul','motor','musty','murky','mealy','manic','manly'],
-  n:['nifty','ninja','notch','night','nymph','nudge','nimble','noisy','nifty','natal','nerve','nifty','noble','nasty'],
-  o:['ozone','occur','optic','ovoid','oblique','outdo','onset','outdo','octal','ochre','oddly','orbit','oomph'],
-  p:['plump','poppy','primp','plaid','plank','pluck','plume','prank','prism','prune','proxy','pulpy','puppy','purse'],
-  q:['quaff','qualm','quash','queen','quirk','quota','queue','query','quest','quick','quill','quite','quota','qubit'],
-  r:['risky','rugby','rural','raspy','rally','rapid','raspy','rigid','risky','rocky','rowdy','ruddy','rusty','rustic'],
-  s:['sissy','sniff','steep','sting','stoop','strip','stuck','stunt','surly','swarm','swept','swing','swoon','syrup'],
-  t:['tacky','tangy','tatty','tipsy','totem','tasty','theft','thick','thing','thorn','throb','thugs','tipsy','tryst'],
-  u:['uncut','unify','untie','utter','ultra','unfit','unzip','upset','until','undue','union','unify','using','under'],
-  v:['vivid','vault','vying','vinyl','valor','vexed','venom','verge','vicar','vigor','virtu','vibes','vocal','voter'],
-  w:['wryly','witty','weird','weary','wimpy','windy','witty','wooly','wordy','wormy','wrath','wrist','wrong','woozy'],
-  x:['exact','expel','extra','exude','exist','excel','exert','exile','exult','expat','oxide','pixel','mixed','boxed'],
-  y:['yummy','yokel','yucky','yacht','yearn','yodel','yield','yokel','young','yours','youth','yelpy','yardy'],
-  z:['jazzy','fuzzy','dizzy','fizzy','pizza','buzzy','blaze','froze','gauze','graze','glaze','mazes','sized','ozone'],
-  '0':['port 0','size 0','index 0','step 0','count 0','base 0'],
-  '1':['step 1','port 1','index 1','var1','argc 1','day 1'],
-  '2':['page 2','take 2','floor 2','step 2','base 2'],
-  '3':['day 3','step 3','base 3','run 3','lane 3'],
-  '4':['step 4','page 4','run 4','lane 4','port 4'],
-  '5':['step 5','page 5','port 5','lane 5','run 5'],
-  '6':['step 6','run 6','port 6','lane 6','day 6'],
-  '7':['step 7','run 7','day 7','port 7'],
-  '8':['step 8','run 8','port 8','lane 8'],
-  '9':['step 9','run 9','port 9'],
-};
-
-function buildDrillWords(targetKeys,weightMap){
-  // Pick 5-9 words heavily seeded from drill word lists for target keys
-  const words=[];
-  const count=5+ri(0,4);
-  for(let i=0;i<count;i++){
-    // 70% chance pick a word for a target key, 30% for any key
-    const useTarget=Math.random()<0.7&&targetKeys.length>0;
-    if(useTarget){
-      const k=targetKeys[ri(0,Math.min(targetKeys.length-1,2))]; // bias toward top 3
-      const pool=DRILL_WORDS[k];
-      if(pool&&pool.length){
-        words.push(pool[ri(0,pool.length-1)]);
-        continue;
-      }
-    }
-    // fallback: pick a random word from any target key pool
-    const allPoolKeys=Object.keys(DRILL_WORDS);
-    const rk=allPoolKeys[ri(0,allPoolKeys.length-1)];
-    const p=DRILL_WORDS[rk];
-    if(p) words.push(p[ri(0,p.length-1)]);
-  }
-  return words.join(' ').replace(/  +/g,' ').trim();
-}
-
-// Strategy 2: seed a real sentence — pick one whose chars overlap heavily with target keys
-function buildSeededSentence(targetKeys){
-  if(targetKeys.length===0) return getPrompt('sentences');
-  const targetSet=new Set(targetKeys);
-  // Score each sentence by overlap with target keys
-  const candidates=[];
-  for(let i=0;i<30;i++){
-    const s=SENTS[ri(0,SENTS.length-1)]();
-    let overlap=0;
-    for(const ch of s.toLowerCase()){if(targetSet.has(ch))overlap++;}
-    candidates.push({s,overlap});
-  }
-  candidates.sort((a,b)=>b.overlap-a.overlap);
-  // Pick from top 5 with some randomness
-  const pick=candidates[ri(0,Math.min(4,candidates.length-1))];
-  return cap(pick.s);
-}
-
-// Strategy 3: build a weighted-random character string that looks like a typing exercise
-function buildWeightedRandom(targetKeys,weightMap){
-  // Build a weighted pool of characters
-  const pool=[];
-  Object.entries(weightMap).forEach(([k,w])=>{
-    for(let i=0;i<w;i++) pool.push(k);
-  });
-  // Build words of 3-7 chars separated by spaces, ~40-60 chars total
-  const words=[];
-  let total=0;
-  while(total<45){
-    const len=3+ri(0,4);
-    let word='';
-    for(let i=0;i<len;i++){
-      word+=pool[ri(0,pool.length-1)];
-    }
-    words.push(word);
-    total+=len+1;
-  }
-  return words.join(' ');
-}
-
-function getProblemKeysSummary(){
-  // Returns a short human-readable string of the keys being targeted
-  const scored=[];
-  const allKeys='abcdefghijklmnopqrstuvwxyz0123456789`-=[]\\;\',./'.split('');
-  allKeys.forEach(k=>{
-    const e=keyErrors[k]||0, c=keyCorrect[k]||0, tot=e+c;
-    const errRate=tot>0?e/tot:0;
-    const unusedBonus=tot===0?0.12:tot<5?0.07:0;
-    const score=errRate*Math.sqrt(tot+1)+unusedBonus;
-    if(score>0.05) scored.push({k,errRate,tot,score});
-  });
-  scored.sort((a,b)=>b.score-a.score);
-  if(scored.length===0) return null;
-  const top=scored.slice(0,5);
-  const parts=top.map(({k,errRate,tot})=>{
-    if(tot===0) return `"${k}" (unused)`;
-    return `"${k}" ${Math.round(errRate*100)}% err`;
-  });
-  return 'Targeting: '+parts.join(' · ');
-}
-
-// ── Custom problem keys override ──
-let pkCustomKeys = null; // null = auto (heatmap), array of chars = manual
-
-function updatePkInfoBar(){
-  const input = document.getElementById('pkCustomInput');
-  if(pkCustomKeys !== null){
-    // Show custom keys in input
-    input.value = pkCustomKeys.join(' ');
-    input.title = 'Custom keys — edit to change';
-    document.getElementById('pkResetBtn').style.opacity='1';
-  } else {
-    // Auto mode: show summary in placeholder, clear value
-    const summary = getProblemKeysSummary();
-    if(summary){
-      // parse keys from summary to show in input as read-only hint
-      const matches = summary.match(/"([^"]+)"/g);
-      if(matches) input.placeholder = matches.map(m=>m.replace(/"/g,'')).join(' ');
-      else input.placeholder = 'e.g. q z x j k';
-    } else {
-      input.placeholder = 'No data yet — type first';
-    }
-    input.value = '';
-    document.getElementById('pkResetBtn').style.opacity='0.4';
-  }
-}
-
-function resetPkCustom(){
-  pkCustomKeys = null;
-  updatePkInfoBar();
-  newPrompt();
-}
-
-// Listen for edits to the custom input — commit on Enter or blur
-// Wire up pkCustomInput after DOM is available (script is at end of body)
-(function(){
-  const ci = document.getElementById('pkCustomInput');
-  if(!ci) return;
-  function commitCustom(){
-    const val = ci.value.trim();
-    if(val === ''){
-      pkCustomKeys = null;
-    } else {
-      const parts = val.split(/[\s,]+/).map(s=>s.toLowerCase()).filter(s=>s.length>0);
-      pkCustomKeys = parts.length > 0 ? parts : null;
-    }
-    updatePkInfoBar();
-    if(mode === 'problemkeys') newPrompt();
-  }
-  ci.addEventListener('keydown', function(e){
-    if(e.key==='Enter'){ e.preventDefault(); commitCustom(); focusInput(); }
-    if(e.key==='Escape'){ e.preventDefault(); resetPkCustom(); focusInput(); }
-    e.stopPropagation();
-  });
-  ci.addEventListener('blur', commitCustom);
-})();
-
-// Override getProblemKeysPrompt to respect custom keys
-const _origGetProblemKeysPrompt = getProblemKeysPrompt;
-function getProblemKeysPromptFinal(){
-  if(pkCustomKeys && pkCustomKeys.length > 0){
-    // Build weightMap: custom keys get high weight
-    const weightMap = {};
-    'abcdefghijklmnopqrstuvwxyz0123456789`-=[]\\;\',./'.split('').forEach(k=>weightMap[k]=1);
-    pkCustomKeys.forEach(k=>{ weightMap[k]=18; });
-    const strategy = Math.random();
-    if(strategy < 0.45){
-      return { prompt: buildDrillWords(pkCustomKeys, weightMap), targetKeys: pkCustomKeys };
-    } else if(strategy < 0.75){
-      return { prompt: buildSeededSentence(pkCustomKeys), targetKeys: pkCustomKeys };
-    } else {
-      return { prompt: buildWeightedRandom(pkCustomKeys, weightMap), targetKeys: pkCustomKeys };
-    }
-  }
-  return _origGetProblemKeysPrompt();
-}
-
-
-function getPrompt(mode){
-  if(mode==='sentences') return cap(inj(SENTS[ri(0,SENTS.length-1)]()));
-  if(mode==='stories')   return STORIES[ri(0,STORIES.length-1)];
-  if(mode==='code')      return CODE[ri(0,CODE.length-1)];
-  if(mode==='numbers')   return NUMS[ri(0,NUMS.length-1)]();
-  if(mode==='symbols')   return SYMS[ri(0,SYMS.length-1)];
-  if(mode==='mixed'){    const m=['sentences','stories','code','numbers','symbols']; return getPrompt(m[ri(0,4)]); }
-  if(mode==='problemkeys'){ const r=getProblemKeysPromptFinal(); return r.prompt; }
-  return '';
-}
-
-// ═══════════════════════════════════════════════
 // STATE
-// ═══════════════════════════════════════════════
-let mode='sentences',prompt='',typed=[],typedChars=[],errs=0;
-let startT=null,frozenMs=0,lastKeyT=null;
-let timerDur=0,timerStart=null,timerIval=null,timerExpired=false;
-let wpmIval=null;
-let hardcore=false;
-let keyErrors={},keyCorrect={},wpmHist=[],sesWpm=[],prompts=0;
-// per-mode stats: {sentences:{bestWpm,totalWpm,prompts,errors,correct}, ...}
-let modeStats={};
-const MODES_LIST=['sentences','stories','code','numbers','symbols','mixed','problemkeys'];
-function initModeStats(){MODES_LIST.forEach(m=>{if(!modeStats[m])modeStats[m]={bestWpm:0,totalWpm:0,prompts:0,errors:0,correct:0};});}
+let currentMode='sentences';
+let currentText='';
+let currentIndex=0;
+let typedInput='';
+let stats={sentences:{}, stories:{}, code:{}, numbers:{}, symbols:{}, mixed:{}, problemkeys:{}};
+let keyCorrect={}, keyErrors={};
+let sessionWPM=[], sessionAcc=[];
+let timerRunning=false, timerVal=0, startTime=0;
+let hardcoreMode=false;
 
-function loadStats(){
-  try{const s=JSON.parse(localStorage.getItem('typo_v14')||'{}');
-    keyErrors=s.e||{};keyCorrect=s.c||{};wpmHist=s.w||[];prompts=s.p||0;modeStats=s.ms||{};}catch(e){}
-  initModeStats();
-}
-function saveStats(){
-  try{localStorage.setItem('typo_v14',JSON.stringify({e:keyErrors,c:keyCorrect,w:wpmHist,p:prompts,ms:modeStats}));}catch(e){}
-}
-function clearStats(){keyErrors={};keyCorrect={};wpmHist=[];prompts=0;sesWpm=[];modeStats={};initModeStats();saveStats();renderStats();}
-
-function focusInput(){
-  const el=document.getElementById('typeInput');
-  el.focus();
-  // move cursor to end
-  const v=el.value;el.value='';el.value=v;
-}
-
-function setMode(m,btn){
-  mode=m;
-  document.querySelectorAll('.mode-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  newPrompt();
-}
-function setTimer(val){
-  timerDur=parseInt(val)||0;
-  document.getElementById('timerSelect').classList.toggle('active-timer',timerDur>0);
-  document.getElementById('timerSpan').style.display=timerDur>0?'':'none';
-  stopTimer();resetPrompt();
-}
-function setDictTimer(){}
-function toggleHardcore(btn){
-  hardcore=!hardcore;
-  // sync both buttons
-  document.querySelectorAll('.hardcore-btn').forEach(b=>b.classList.toggle('active',hardcore));
+function loadPrompt(){
+  let pool;
+  if(currentMode==='sentences') pool=SENTS;
+  else if(currentMode==='stories') pool=STORIES;
+  else pool=SENTS;
+  
+  if(pool.length===0) return;
+  const gen=pool[Math.floor(Math.random()*pool.length)];
+  // IMPORTANT: Handle both functions and strings
+  currentText = typeof gen === 'function' ? gen() : gen;
+  
+  if(!currentText || currentText.trim()===''){
+    loadPrompt();
+    return;
+  }
+  
+  currentIndex=0;
+  typedInput='';
+  renderPrompt();
+  focusInput();
+  updateStats();
 }
 
-// ── Render prompt with word-level inline-block spans ──
 function renderPrompt(){
   const el=document.getElementById('promptText');
   let html='';
-  let i=0,ci=0; // ci = char index in prompt
-  while(i<prompt.length){
-    if(prompt[i]===' '){
-      // space
-      const cls=ci<typed.length?(typed[ci]?'correct':'wrong'):'pending';
-      if(ci===typed.length) html+=`<span class="cursor"></span>`;
-      html+=`<span class="${cls}"> </span>`;
-      i++;ci++;
-    } else {
-      // word: collect all non-space chars into one inline-block span
-      let inner='';
-      while(i<prompt.length&&prompt[i]!==' '){
-        const ch=prompt[i];
-        const cls=ci<typed.length?(typed[ci]?'correct':'wrong'):'pending';
-        if(ci===typed.length) inner+=`<span class="cursor"></span>`;
-        // For wrong chars: if typed char was space but expected non-space, show expected char in red
-        // Otherwise show the typed character
-        let displayCh=ch;
-        if(cls==='wrong'&&typedChars[ci]!==undefined){
-          if(typedChars[ci]===' '&&ch!==' ') displayCh=ch; // show intended char when wrong space
-          else displayCh=typedChars[ci];
-        }
-        inner+=`<span class="${cls}">${esc(displayCh)}</span>`;
-        i++;ci++;
+  for(let i=0;i<currentText.length;i++){
+    if(i<currentIndex){
+      if(currentText[i]===typedInput[i]){
+        html+=`<span class="correct">${esc(currentText[i])}</span>`;
+      } else {
+        html+=`<span class="wrong">${esc(currentText[i])}</span>`;
       }
-      html+=`<span style="display:inline-block">${inner}</span>`;
+    } else if(i===currentIndex){
+      html+=`<span class="cursor"></span><span class="pending">${esc(currentText[i])}</span>`;
+    } else {
+      html+=`<span class="pending">${esc(currentText[i])}</span>`;
     }
   }
-  if(typed.length===prompt.length) html+=`<span class="cursor"> </span>`;
+  if(currentIndex>=currentText.length){
+    html+=`<span class="cursor"></span>`;
+  }
   el.innerHTML=html;
-  if(typeof highlightNextKey==='function') highlightNextKey();
+  updateKeyHighlight();
 }
 
-function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-
-function newPrompt(){
-  prompt=getPrompt(mode);typed=[];typedChars=[];errs=0;
-  startT=null;frozenMs=0;lastKeyT=null;timerExpired=false;
-  document.getElementById('typeInput').value='';
-  stopTimer();stopWpm();setEnterLit(false);
-  // Problem Keys info bar
-  const pkBar=document.getElementById('pkInfoBar');
-  if(mode==='problemkeys'){
-    pkBar.style.display='flex';
-    updatePkInfoBar();
-  } else {
-    pkBar.style.display='none';
-  }
-  renderPrompt();updateBar();
-  setTimeout(focusInput,50);
-}
-function resetPrompt(){
-  typed=[];typedChars=[];errs=0;startT=null;frozenMs=0;lastKeyT=null;timerExpired=false;
-  document.getElementById('typeInput').value='';
-  stopTimer();stopWpm();setEnterLit(false);
-  renderPrompt();updateBar();
-}
-function updateBar(){
-  const wpm=startT&&typed.length>0?Math.round((typed.length/5)/((frozenMs||1)/60000)):0;
-  document.getElementById('wpmDisplay').textContent=wpm;
-  const acc=typed.length>0?Math.round(((typed.length-errs)/typed.length)*100):100;
-  const as=document.getElementById('accSpan');
-  as.className=acc>=97?'good':acc>=90?'warn':'bad';
-  document.getElementById('accDisplay').textContent=acc+'%';
-  document.getElementById('errDisplay').textContent=errs;
-  document.getElementById('promptsDisplay').textContent=prompts;
-}
-
-function stopTimer(){
-  if(timerIval){clearInterval(timerIval);timerIval=null;}
-  document.getElementById('countdownWrap').classList.toggle('visible',timerDur>0);
-  document.getElementById('countdownBar').style.width='100%';
-}
-function startCountdown(){
-  timerStart=Date.now();
-  document.getElementById('countdownWrap').classList.add('visible');
-  timerIval=setInterval(()=>{
-    const el=(Date.now()-timerStart)/1000;
-    const pct=Math.max(0,1-el/timerDur);
-    document.getElementById('countdownBar').style.width=(pct*100)+'%';
-    document.getElementById('timerDisplay').textContent=Math.ceil(timerDur-el)+'s';
-    if(el>=timerDur){clearInterval(timerIval);timerIval=null;timerExpired=true;document.getElementById('countdownBar').style.width='0%';finishPrompt();}
-  },100);
-}
-function startWpm(){
-  if(wpmIval) clearInterval(wpmIval);
-  startT=Date.now();lastKeyT=Date.now();frozenMs=0;
-  wpmIval=setInterval(()=>{
-    if(lastKeyT&&Date.now()-lastKeyT<2000) frozenMs=Date.now()-startT;
-    updateBar();
-  },250);
-}
-function stopWpm(){if(wpmIval){clearInterval(wpmIval);wpmIval=null;}}
-function calcWpm(){
-  if(!startT||typed.length===0)return 0;
-  return Math.round((typed.length/5)/((frozenMs||1)/60000));
-}
-
-// ── Caps Lock detection ──
-function updateCapsLed(on){
-  document.querySelectorAll('[id^="caps-led-"]').forEach(el=>{
-    el.classList.toggle('on',on);
-  });
-}
-document.addEventListener('keydown',function(e){
-  if(e.key==='CapsLock') updateCapsLed(e.getModifierState('CapsLock'));
-  // Update on any key to keep state in sync
-  setTimeout(()=>updateCapsLed(e.getModifierState('CapsLock')),10);
-});
-
-// ── Enter key lit when prompt is complete ──
-let _enterLit=false;
-function setEnterLit(on){
-  if(_enterLit===on) return;
-  _enterLit=on;
-  ['trainerKb','dictKb','statsKb'].forEach(cid=>{
-    const el=document.getElementById(`key-${cid}-enter`);
-    if(el) el.classList.toggle('enter-lit',on);
-  });
-}
-
-// ── Determine which shift key to highlight based on key side ──
-// Left-side keys (use RIGHT shift): ` 1 2 3 4 5 q w e r t a s d f g z x c v b tab caps lshift
-const LEFT_KEYS=new Set(['`','1','2','3','4','5','q','w','e','r','t','a','s','d','f','g','z','x','c','v','b','tab','caps','lshift',' ']);
-function shiftKeyFor(ch){
-  // returns 'lshift' or 'rshift'
-  const k=ch.toLowerCase();
-  return LEFT_KEYS.has(k)?'rshift':'lshift';
-}
-
-// Flash key - also flashes the correct shift key when character requires shift
-const kft={};
-function flashKey(k,good,origCh){
-  // Determine if this character needs shift:
-  // - uppercase letter
-  // - secondary char (like ! @ # $ { } etc.)
-  const isSecondary = SECONDARY_REV[origCh] !== undefined;
-  const needsShift = isSecondary || (origCh && origCh !== origCh.toLowerCase() && origCh.match(/[a-zA-Z]/));
-  // If it's a secondary char, the base key is SECONDARY_REV[origCh]
-  const baseKey = isSecondary ? SECONDARY_REV[origCh] : k;
-  const shiftKey = needsShift ? shiftKeyFor(baseKey) : null;
-  const targets=[baseKey];
-  if(shiftKey) targets.push(shiftKey);
-
-  targets.forEach(tk=>{
-    const el=document.getElementById(`key-trainerKb-${tk}`);
-    if(!el)return;
-    if(kft[tk])clearTimeout(kft[tk]);
-    el.classList.remove('lit','lit-space','err');
-    if(good){
-      if(tk===' ') el.classList.add('lit-space');
-      else el.classList.add('lit');
-    } else {
-      if(tk===baseKey) el.classList.add('err');
-      else el.classList.add('lit'); // flash shift side lit even on wrong key
-    }
-    kft[tk]=setTimeout(()=>el.classList.remove('lit','lit-space','err'),120);
-  });
-}
-
-let _prevNextKeys=[];
-function highlightNextKey(){
-  // clear previous highlights
-  _prevNextKeys.forEach(pk=>{
-    const pe=document.getElementById(`key-trainerKb-${pk}`);
-    if(pe) pe.classList.remove('next-key');
-  });
-  _prevNextKeys=[];
-  if(typed.length>=prompt.length) return; // done
-  const ch=prompt[typed.length];
-  // Determine base key: if it's a secondary char (like !@#${} etc.), use its base key
-  let k;
-  if(SECONDARY_REV[ch]){
-    k=SECONDARY_REV[ch]; // e.g. '!' → '1'
-  } else {
-    k=ch===' '?' ':ch.toLowerCase();
-  }
-  const keys=[k];
-  // Highlight correct shift key if character requires shift
-  const needsShift=SECONDARY_REV[ch]||(ch!==ch.toLowerCase()&&ch.match(/[a-zA-Z]/));
-  if(needsShift) keys.push(shiftKeyFor(k));
-  keys.forEach(tk=>{
-    const el=document.getElementById(`key-trainerKb-${tk}`);
-    if(el){el.classList.add('next-key');_prevNextKeys.push(tk);}
-  });
-}
-
-// Cursor always visible — no hide logic
-
-// Prompt box focus indicator
-document.getElementById('typeInput').addEventListener('focus',()=>document.getElementById('promptBox').classList.add('focused'));
-document.getElementById('typeInput').addEventListener('blur',()=>document.getElementById('promptBox').classList.remove('focused'));
-
-// ═══════════════════════════════════════════════
-// INPUT
-// ═══════════════════════════════════════════════
-const inp=document.getElementById('typeInput');
-
-inp.addEventListener('keydown',function(e){
-  if(e.key==='Tab'){e.preventDefault();newPrompt();return;}
-  if(e.key==='Escape'){e.preventDefault();resetPrompt();return;}
-  if(e.key==='Enter'){
-    e.preventDefault();
-    if(typed.length===prompt.length) finishPrompt();
-    return;
-  }
-  if(startT) lastKeyT=Date.now();
-});
-
-inp.addEventListener('input',function(){
-  if(timerExpired)return;
-  const val=this.value;
-  const pos=val.length;
-
-  if(!startT&&pos>0){startWpm();if(timerDur>0)startCountdown();}
-  if(pos===0){resetPrompt();return;}
-
-  const prev=typed.length;
-  if(pos<prev){
-    // backspace — also trim typedChars
-    typed=typed.slice(0,pos);
-    typedChars=typedChars.slice(0,pos);
-    lastKeyT=Date.now();
-    renderPrompt();updateBar();
-    return;
-  }
-  if(pos>prev&&pos<=prompt.length){
-    const exp=prompt[pos-1];
-    const got=val[pos-1];
-    const ok=got===exp;
-    typed.push(ok);
-    typedChars.push(got); // always store what was actually typed
-    lastKeyT=Date.now();
-    // For heatmap: use base key (secondary chars like ! map to their base key 1)
-    const ek=SECONDARY_REV[exp] || exp.toLowerCase();
-    if(ok){keyCorrect[ek]=(keyCorrect[ek]||0)+1;playCorrect();flashKey(ek,true,exp);}
-    else{
-      keyErrors[ek]=(keyErrors[ek]||0)+1;errs++;playWrong();flashKey(ek,false,exp);
-      if(hardcore){
-        saveStats();
-        renderPrompt();
-        setTimeout(()=>newPrompt(),120);
-        return;
-      }
-    }
-    // Light up Enter key when prompt is fully typed
-    setEnterLit(typed.length===prompt.length);
-    renderPrompt();updateBar();saveStats();
-  }
-  if(pos>prompt.length) this.value=val.slice(0,prompt.length);
-});
-
-function finishPrompt(){
-  stopWpm();
-  const w=calcWpm();
-  if(w>0){wpmHist.push(w);sesWpm.push(w);}
-  prompts++;
-  // record per-mode stats
-  const ms=modeStats[mode];
-  if(ms){
-    ms.prompts++;
-    if(w>0){ms.totalWpm+=w;if(w>ms.bestWpm)ms.bestWpm=w;}
-    ms.errors+=errs;
-    ms.correct+=typed.filter(Boolean).length;
-  }
-  playArpeggio();
-  saveStats();newPrompt();
-}
-
-// ═══════════════════════════════════════════════
-// DICTATION
-// ═══════════════════════════════════════════════
-let dictDiff='easy'; // 'easy'|'medium'|'hard'
-let dState=0; // 0=idle, 1=listening, 2=revealed
-let dSent='';
-
-function setDictDiff(diff,btn){
-  dictDiff=diff;
-  document.querySelectorAll('#panel-dictation .mode-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  dictReset();
-}
-
-function getDictPrompt(){
-  if(dictDiff==='easy'){
-    // single word: pick a random word from a curated pool
-    const words=['apple','bridge','candle','dragon','ember','forest','gentle','harbor',
-      'island','jungle','kettle','lantern','marble','narrow','oyster','pencil','quarter',
-      'rabbit','silver','timber','unique','velvet','walnut','yellow','zipper','anchor',
-      'basket','castle','desert','engine','fender','garden','helmet','insect','jacket',
-      'kitten','locket','muffin','napkin','orange','pillow','quartz','rocket','saddle',
-      'tunnel','urchin','violet','wicker','xenon','yogurt','cobalt','dagger','falcon',
-      'gravel','hunger','intact','jigsaw','kernel','lizard','magnet','noodle','offset',
-      'pebble','quirky','riddle','socket','tackle','unpack','vacant','waddle','xylem',
-      'yarrow','zealot','affirm','blotch','cactus','dawdle','elbow','fringe','giggle',
-      'hatch','ironic','jaunty','knotty','luster','mutter','nifty','oblong','pounce',
-      'quiver','ramble','scorch','tangle','uplift','vortex','wobble','climber','drifter',
-      // 100+ more words
-      'abrupt','accent','aching','adrift','aglow','amble','amulet','anvil','arcade',
-      'ardent','arson','ashen','astute','attic','auburn','awning','badger','ballet',
-      'banter','barley','barrel','beaker','beige','birch','bison','blaze','bliss',
-      'blunt','bobcat','bonfire','bonsai','boreal','bounty','brawl','briar','brine',
-      'brisk','brooch','buckle','buoyant','burrow','canyon','cargo','cedar','cellar',
-      'chalet','chalk','chasm','cheek','chisel','churn','cipher','clamor','clasp',
-      'cleft','cling','cloak','clog','clover','clutch','comet','compost','condor',
-      'copper','coral','corset','cotton','cove','crag','crane','creak','creek',
-      'crisp','crocus','crust','culvert','cunning','current','curtain','cutlass',
-      'cymbal','debris','decal','decree','delta','dense','depot','derby','detour',
-      'dew','dingo','dirge','discord','divan','divide','dizzy','dome','dormant',
-      'dowel','drape','drawl','dreary','drench','drift','drone','druid','dusk',
-      'dwarf','dwell','eager','earnest','ebony','eclipse','eddy','eerie','efface',
-      'egret','elegy','elude','ember','embroil','engulf','ensign','envoy','erode',
-      'esteem','estuary','etch','evade','evoke','exact','exult','fabric','famine',
-      'fathom','ferret','ferry','fetch','fidget','flair','flank','flash','fleck',
-      'fledge','flint','floe','flurry','flute','forage','forge','forsake','foul',
-      'fracas','fray','frenzy','friar','frond','frosty','fumes','fungi','funnel',
-      'furrow','gable','galley','garnet','gaunt','gavel','gaze','geyser','glade',
-      'glare','gleam','glean','gloom','gloss','gloat','glower','glyph','gnome',
-      'goblin','gondola','gorge','gouge','grail','granite','grapple','grotto',
-      'grovel','grudge','gruff','guile','guise','gulch','gust','hamlet','hangar',
-      'haunt','haven','hazard','haze','heist','herald','herbal','heron','hinge',
-      'horde','hover','humus','hurtle','hustle','ibis','ignite','impede','infer',
-      'ingot','inlay','inlet','inscribe','invoke','irate','iris','irk','ivy',
-      'joust','kindle','knack','kneel','knoll','kudos','lament','lance','larch',
-      'larder','lark','latch','latent','lattice','laurel','lean','ledge','levy',
-      'lichen','lilt','limber','limpid','lintel','lore','lurch','lurk','lyric',
-      'mantle','maul','meander','menace','mesa','mirth','mist','moat','molten',
-      'mortar','mossy','mottle','murky','murmur','muster','mystic','nadir','natter',
-      'niche','nimble','nocturne','nomad','notch','nuzzle','oaken','oblique','ochre',
-      'offing','omen','onset','opaque','oracle','orifice','outpost','ovoid','paddle',
-      'palisade','pallor','panther','parley','parry','pasture','patent','patrol',
-      'peak','pellet','perch','peril','pestle','pigeon','pillar','pinion','pinto',
-      'plait','plaque','plateau','plover','plume','plunge','plunk','pommel','poplar',
-      'portal','pouch','powder','prattle','prism','prowl','prune','pulsar','pumice',
-      'quarry','quell','quest','rabble','ragged','rancor','rattle','ravine','recoil',
-      'reek','relic','remnant','render','resin','retort','ridgeline','rift','rivet',
-      'roam','robust','rogue','ruckus','rudder','rustle','rugged','saber','sallow',
-      'salvo','sanctum','satchel','saucer','savor','scaffold','scald','scallop',
-      'scalpel','scamper','scar','scorch','scour','scowl','scree','scuffle','seize',
-      'sentry','serene','shale','shallow','sheen','shimmer','shoal','shroud','sift',
-      'silt','sinew','siren','skiff','skirmish','sleet','sliver','smolder','snare',
-      'snarl','sniff','solace','somber','sonar','soot','sortie','spar','sparse',
-      'speck','spelunk','spire','splint','splinter','spool','sprawl','spurge',
-      'squall','stalwart','stammer','stanch','startle','stave','steep','steppe',
-      'stern','stifle','stigma','stoic','strand','stratum','stray','streak','strident',
-      'stripe','strive','stroke','stump','subdued','subside','subtle','summon','sunken',
-      'swamp','swath','swift','swirl','sycamore','synapse','talon','tangle','tarry',
-      'taunt','tawny','tempest','tendril','terrain','thatch','thicket','thistle',
-      'thorn','thrash','thresh','thud','tinge','tonic','torrent','totter','tourney',
-      'trample','trawl','trench','trestle','trice','trinket','trudge','trundle',
-      'tumult','turf','twine','twitch','umbral','undulate','unmoor','unravel','untether',
-      'utmost','valor','vanguard','vapor','vast','verdant','vestige','vigilant','vigil',
-      'vista','vivid','warden','warren','wary','wayward','weald','wend','whirl',
-      'wield','wilder','wisp','wither','wrath','wrench','wrest','wring','yearn','zenith'];
-    return words[Math.floor(Math.random()*words.length)];
-  }
-  if(dictDiff==='medium'){
-    // 2–4 word phrase: grab first 2–4 words of a sentence
-    const base=getPrompt('sentences');
-    const words=base.replace(/[.,!?;:]/g,'').split(' ');
-    const count=2+Math.floor(Math.random()*3); // 2, 3, or 4
-    return words.slice(0,count).join(' ');
-  }
-  // hard = full sentence
-  return getPrompt('sentences');
-}
-
-function dictReset(){
-  dState=0; dSent='';
-  const b=document.getElementById('dictBox');
-  b.className='dict-box';
-  b.innerHTML='Press <b>Tab</b> to speak a word and begin.';
-  document.getElementById('dictInput').value='';
-  document.getElementById('dictInput').focus();
-}
-
-function dictSpeak(){
-  // Generate new prompt if idle, otherwise repeat current
-  if(dState===0){
-    dSent=getDictPrompt();
-    dState=1;
-    const b=document.getElementById('dictBox');
-    b.className='dict-box has-text';
-    // Show difficulty label but NOT the text
-    const label={'easy':'🔊 One word — type what you hear.','medium':'🔊 Short phrase — type what you hear.','hard':'🔊 Sentence — type what you hear.'}[dictDiff];
-    b.textContent=label;
-    document.getElementById('dictInput').value='';
-  }
-  speak(dSent);
-}
-
-function dictCheckAndNext(){
-  if(dState===0){
-    // Nothing spoken yet — same as Tab
-    dictSpeak(); return;
-  }
-  if(dState===1){
-    // Check answer
-    const typed=document.getElementById('dictInput').value.trim();
-    const tgt=dSent;
-    let h='';
-    for(let i=0;i<tgt.length;i++){
-      const ch=tgt[i]===' '?' ':esc(tgt[i]);
-      h+=`<span class="${i<typed.length?(typed[i]===tgt[i]?'correct':'wrong'):'wrong'}">${ch}</span>`;
-    }
-    const b=document.getElementById('dictBox');
-    b.className='dict-box has-text dict-result';
-    b.innerHTML=h;
-    dState=2;
-    return;
-  }
-  if(dState===2){
-    // Move to next prompt
-    dState=0; dSent='';
-    dictSpeak();
+function updateKeyHighlight(){
+  document.querySelectorAll('.key').forEach(k=>k.classList.remove('next-key','enter-lit','lit','err'));
+  if(currentIndex>=currentText.length){
+    const enterKey=document.getElementById('key-trainerKb-enter');
+    if(enterKey) enterKey.classList.add('enter-lit');
+  } else if(currentIndex<currentText.length){
+    const nextChar=currentText[currentIndex].toLowerCase();
+    const key=document.getElementById(`key-trainerKb-${nextChar}`);
+    if(key) key.classList.add('next-key');
   }
 }
 
-document.getElementById('dictInput').addEventListener('keydown',function(e){
+function onKeyPress(e){
   if(e.key==='Tab'){
     e.preventDefault();
-    dictSpeak();
-    return;
-  }
-  if(e.key==='Escape'){
+    loadPrompt();
+  } else if(e.key==='Enter'){
     e.preventDefault();
-    dictReset();
-    return;
+    if(currentIndex>=currentText.length){
+      recordPrompt();
+      loadPrompt();
+    }
+  } else if(e.key==='Escape'){
+    currentIndex=0;
+    typedInput='';
+    renderPrompt();
+  } else if(e.key.length===1){
+    if(currentIndex<currentText.length){
+      const expected=currentText[currentIndex];
+      const match=(e.key===expected);
+      
+      if(match){
+        playCorrect();
+        currentIndex++;
+        typedInput+=e.key;
+        recordKey(expected.toLowerCase(), true);
+      } else {
+        playWrong();
+        if(hardcoreMode){
+          currentIndex=0;
+          typedInput='';
+          recordKey(expected.toLowerCase(), false);
+          renderPrompt();
+          return;
+        }
+        recordKey(expected.toLowerCase(), false);
+      }
+      renderPrompt();
+    }
   }
-  if(e.key==='Enter'){
-    e.preventDefault();
-    dictCheckAndNext();
-    return;
-  }
-});
-
-function speak(s){if(!s)return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(s);u.rate=.85;window.speechSynthesis.speak(u);}
-
-// ═══════════════════════════════════════════════
-// STATS
-// ═══════════════════════════════════════════════
-function renderStats(){
-  const all=wpmHist,ses=sesWpm;
-  document.getElementById('bestWpm').textContent=all.length?Math.max(...all):'—';
-  document.getElementById('avgWpm').textContent=ses.length?Math.round(ses.reduce((a,b)=>a+b,0)/ses.length):'—';
-  document.getElementById('promptsDone').textContent=prompts;
-  const tK=Object.values(keyCorrect).reduce((a,b)=>a+b,0);
-  const tE=Object.values(keyErrors).reduce((a,b)=>a+b,0);
-  document.getElementById('statsAcc').textContent=tK+tE>0?Math.round(tK/(tK+tE)*100)+'%':'—';
-  drawChart();drawPK();drawModeStats();buildKeyboard('statsKb',true);
-}
-function drawModeStats(){
-  const grid=document.getElementById('modeStatsGrid'); grid.innerHTML='';
-  MODES_LIST.forEach(m=>{
-    const ms=modeStats[m]||{bestWpm:0,totalWpm:0,prompts:0,errors:0,correct:0};
-    const avgWpm=ms.prompts>0?Math.round(ms.totalWpm/ms.prompts):0;
-    const tot=ms.correct+ms.errors;
-    const acc=tot>0?Math.round(ms.correct/tot*100):100;
-    const card=document.createElement('div');
-    card.className=`mode-stat-card m-${m}`;
-    const rows=[
-      ['Best WPM', ms.bestWpm||'—'],
-      ['Avg WPM', avgWpm||'—'],
-      ['Accuracy', ms.prompts>0?acc+'%':'—'],
-      ['Prompts', ms.prompts],
-      ['Errors', ms.errors],
-    ];
-    card.innerHTML=`<div class="mode-label">${m}</div>`+
-      rows.map(([k,v])=>`<div class="mode-stat-row"><span class="msk">${k}</span><span class="msv">${v}</span></div>`).join('');
-    grid.appendChild(card);
-  });
-}
-function drawChart(){
-  const cv=document.getElementById('wpmChart'),ctx=cv.getContext('2d');
-  const dpr=window.devicePixelRatio||1,W=cv.parentElement.clientWidth-40,H=140;
-  cv.width=W*dpr;cv.height=H*dpr;cv.style.width=W+'px';cv.style.height=H+'px';
-  ctx.scale(dpr,dpr);ctx.clearRect(0,0,W,H);
-  const data=wpmHist.slice(-20);
-  if(data.length<2){ctx.fillStyle='#6b7280';ctx.font='13px Syne';ctx.textAlign='center';ctx.fillText('No data yet',W/2,H/2);return;}
-  const mx=Math.max(...data,10);
-  const p={l:40,r:20,t:10,b:30},cw=W-p.l-p.r,ch=H-p.t-p.b;
-  ctx.strokeStyle='#2a2d3e';ctx.lineWidth=1;
-  for(let g=0;g<=4;g++){
-    const y=p.t+ch*(1-g/4);
-    ctx.beginPath();ctx.moveTo(p.l,y);ctx.lineTo(p.l+cw,y);ctx.stroke();
-    ctx.fillStyle='#6b7280';ctx.font='10px JetBrains Mono';ctx.textAlign='right';
-    ctx.fillText(Math.round(mx*g/4),p.l-4,y+3);
-  }
-  ctx.strokeStyle='#4fc4cf';ctx.lineWidth=2;ctx.beginPath();
-  data.forEach((v,i)=>{const x=p.l+i/(data.length-1)*cw,y=p.t+ch*(1-v/mx);i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);});
-  ctx.stroke();
-  data.forEach((v,i)=>{const x=p.l+i/(data.length-1)*cw,y=p.t+ch*(1-v/mx);ctx.fillStyle='#4fc4cf';ctx.beginPath();ctx.arc(x,y,3,0,Math.PI*2);ctx.fill();});
-  ctx.fillStyle='#6b7280';ctx.font='10px JetBrains Mono';ctx.textAlign='center';
-  data.forEach((v,i)=>{if(i%(Math.ceil(data.length/8))===0||i===data.length-1)ctx.fillText('S'+(wpmHist.length-data.length+i+1),p.l+i/(data.length-1)*cw,H-4);});
-}
-function drawPK(){
-  const list=document.getElementById('pkList');list.innerHTML='';
-  const sorted=Object.keys(keyErrors).filter(k=>keyErrors[k]>0)
-    .sort((a,b)=>{const pa=keyErrors[a]/((keyErrors[a]||0)+(keyCorrect[a]||0)),pb=keyErrors[b]/((keyErrors[b]||0)+(keyCorrect[b]||0));return pb-pa;}).slice(0,20);
-  sorted.forEach(k=>{
-    const e=keyErrors[k]||0,c=keyCorrect[k]||0,tot=e+c,pct=Math.round(e/tot*100);
-    const cls=pct>=40?'red':pct>=20?'orange':'green';
-    const d=document.createElement('div');d.className=`pk-item ${cls}`;
-    d.innerHTML=`<span class="pk-key">${esc(k)}</span><span class="pk-pct">${pct}%</span>`;
-    list.appendChild(d);
-  });
-  if(!sorted.length) list.innerHTML='<span style="color:var(--dim);font-size:.8rem">No errors recorded yet.</span>';
 }
 
-// ═══════════════════════════════════════════════
-// PANEL SWITCHING
-// ═══════════════════════════════════════════════
-function switchPanel(name,btn){
-  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));
-  document.getElementById('panel-'+name).classList.add('active');
+function recordKey(k,correct){
+  keyCorrect[k]=(keyCorrect[k]||0)+(correct?1:0);
+  keyErrors[k]=(keyErrors[k]||0)+(correct?0:1);
+}
+
+function recordPrompt(){
+  if(!stats[currentMode]) stats[currentMode]={};
+  if(!stats[currentMode].done) stats[currentMode].done=0;
+  stats[currentMode].done++;
+  document.getElementById('promptsDisplay').textContent=Object.values(stats).reduce((s,m)=>s+(m.done||0),0);
+}
+
+function updateStats(){
+  // Placeholder
+}
+
+function focusInput(){
+  document.getElementById('typeInput').focus();
+}
+
+function setMode(mode,btn){
+  currentMode=mode;
+  document.querySelectorAll('.mode-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
-  if(name==='stats') renderStats();
-  if(name==='trainer') setTimeout(focusInput,50);
-  if(name==='dictation') setTimeout(()=>document.getElementById('dictInput').focus(),50);
+  loadPrompt();
 }
 
-// ═══════════════════════════════════════════════
-// INIT
-// ═══════════════════════════════════════════════
-loadStats();
-buildKeyboard('trainerKb',false);
-buildKeyboard('dictKb',false);
-newPrompt();
-</script>
+function switchPanel(panel,btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('panel-'+panel).classList.add('active');
+  document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  if(panel==='trainer') focusInput();
+}
 
-<!--
--->
+function setTimer(val){
+  timerVal=parseInt(val);
+}
+
+function toggleHardcore(btn){
+  hardcoreMode=!hardcoreMode;
+  btn.classList.toggle('active');
+}
+
+function clearStats(){
+  stats={sentences:{}, stories:{}, code:{}, numbers:{}, symbols:{}, mixed:{}, problemkeys:{}};
+  keyCorrect={};
+  keyErrors={};
+  sessionWPM=[];
+  sessionAcc=[];
+  document.getElementById('promptsDisplay').textContent='0';
+}
+
+function resetPkCustom(){}
+function setDictDiff(d,b){}
+function setDictTimer(v){}
+
+// Init
+document.getElementById('typeInput').addEventListener('keydown',onKeyPress);
+buildKeyboard('trainerKb');
+buildKeyboard('statsKb',true);
+buildKeyboard('dictKb');
+loadPrompt();
+</script>
 </body>
 </html>
